@@ -1,0 +1,156 @@
+
+/* %%%%%%%%%%%%%%%%%%%% BUTTON STYLES %%%%%%%%%%%%%%%%%%%% */
+
+
+
+.btn {
+  float: left;
+  width: auto;
+  padding: $unit $unit-xl;
+  font-family: $font-1;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semibold;
+  text-transform: uppercase;
+
+  @include mq(sm) {
+    width: 100%;
+  }
+
+  &:hover {
+    cursor: pointer !important;
+    text-decoration: none;
+  }
+
+  &.btn-primary {
+    background-color: $color-secondary;
+    color: white;
+
+    &:hover {
+      background-color: $color-secondary-alt;
+      cursor: pointer;
+    }
+  }
+
+  &.btn-secondary {
+    background-color: $color-secondary;
+    color: white;
+
+    &:hover {
+      background-color: $color-secondary-alt;
+      color: white;
+      cursor: pointer;
+    }
+  }
+
+  &.btn-tertiary {
+    background-color: $color-tertiary;
+    color: white;
+
+    &:hover {
+      background-color: darken($color-tertiary, 10%);
+      cursor: pointer;
+    }
+  }
+}
+
+.btn-view-event {
+  margin-top: $unit-md;
+
+  @include mq(md) {
+    text-align: center;
+    font-size: $font-size-md;
+  }
+
+  @include mq(sm) {
+    width: 100%;
+    text-align: center;
+    font-size: $font-size;
+  }
+
+  i {
+    margin-left: 8px;
+  }
+}
+
+.btn-back-to-team {
+  position: absolute;
+  top: -10px;
+  left: 0;
+
+  i {
+    margin-right: 8px;
+    color: $color-electric-blue !important;
+  }
+
+  @include mq(md) {
+    top: 25px;
+  }
+
+  @include mq(sm) {
+    top: 25px;
+  }
+}
+
+.btn-view-careers {
+  float: left;
+
+  @include mq(md) {
+    width: 100%;
+    text-align: center;
+    font-size: $font-size-md;
+  }
+
+  @include mq(sm) {
+    width: 100%;
+    text-align: center;
+    font-size: $font-size;
+  }
+
+  i {
+    margin-left: 8px;
+  }
+}
+
+.contact-btn-callout {
+  position: fixed;
+  top: 100px;
+  right: -98px;
+  padding: $unit $unit-sm;
+  background-color: $color-secondary;
+  color: white;
+  transition: all 200ms ease;
+  z-index: 20;
+
+  &:hover {
+    right: 0px;
+    background-color: lighten($color-secondary, 12%);
+    color: white;
+
+    i {
+      margin-right: $unit-xxs;
+    }
+  }
+
+  i {
+    margin-right: $unit-xs;
+    font-size: 18px;
+    color: white;
+  }
+}
+
+.btn-back-to-news {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  background-color: transparent !important;
+  color: $color-primary !important;
+
+  &:hover {
+    color: darken($color-electric-blue, 20%) !important;
+  }
+
+  i {
+    margin-right: 8px;
+    color: $color-electric-blue !important;
+  }
+}

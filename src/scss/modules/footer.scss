@@ -1,0 +1,44 @@
+
+/* %%%%%%%%%%%%%%%%%%%% FOOTER STYLES %%%%%%%%%%%%%%%%%%%% */
+
+
+
+footer {
+  float: left;
+  width: 100%;
+  padding: $unit-sm 0;
+  background-color: $color-primary;
+
+  .footer-left {
+    float: left;
+    width: 50%;
+    padding-left: $unit-sm;
+    font-size: $font-size-sm;
+    font-weight: 500;
+
+    p {
+      color: $white;
+
+      a {
+        color: $white;
+
+        &:hover {
+          color: $color-electric-blue-original;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .footer-right {
+    float: left;
+    width: 50%;
+    padding-right: $unit-sm;
+    font-size: $font-size-sm;
+    font-weight: 500;
+    text-align: right;
+
+    .copyright {
+      color: white;
+    }
+  }
+}

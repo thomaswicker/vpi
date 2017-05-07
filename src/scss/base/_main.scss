@@ -1,0 +1,140 @@
+@import "../global/vars";
+
+/* %%%%%%%%%%%%%%%%%%%% MAIN SCSS %%%%%%%%%%%%%%%%%%%% */
+
+html {
+  background-color: $color-primary;
+  font-size: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: $color-primary;
+  font-family: $font-1;
+  background-color: white;
+  letter-spacing: normal;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+ul li a:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.bg-1, .bg-2 {
+  padding-top: 40px;
+  text-align: center;
+}
+
+.bg-1 {
+  min-height: 100px;
+  background-color: red;
+  color: white;
+}
+
+.bg-2 {
+  min-height: 100px;
+  background-color: blue;
+  color: white;
+}
+
+.bg-3 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white !important;
+}
+
+.bg-4 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: purple;
+  color: white
+}
+
+.body-content-hold {
+  float: left;
+  width: 100%;
+  background-color: $color-secondary;
+  color: white;
+  text-align: center;
+
+  h1 {
+    font-size: 30px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+}
+
+.body-content {
+  .body-content-left {
+    float: left;
+    width: 250px;
+
+    @include mq(md) {
+      width: 100%;
+    }
+
+    @include mq(sm) {
+      width: 100%;
+    }
+
+    img {
+      margin-top: 0;
+
+      @include mq(md) {
+        margin-bottom: 25px;
+      }
+
+      @include mq(sm) {
+        margin-bottom: 25px;
+      }
+
+    }
+  }
+
+  .body-content-right {
+    float: left;
+    width: calc(100% - 250px);
+    padding-left: $unit-lg;
+
+    @include mq(md) {
+      width: 100%;
+      padding-left: 0;
+    }
+
+    @include mq(sm) {
+      width: 100%;
+      padding-left: 0;
+    }
+  }
+
+  ul.areas-of-expertise {
+    float: left;
+    width: 100%;
+    list-style-type: disc;
+
+    h3 {
+      font-size: 20px;
+      font-weight: 600;
+
+      @include mq(md) {
+        font-size: 17px;
+      }
+
+      @include mq(sm) {
+        font-size: 17px;
+      }
+    }
+
+    li {
+      float: left;
+      width: 100%;
+      margin-top: $unit-sm;
+      margin-left: $unit-md;
+      line-height: 140%;
+    }
+  }
+}
