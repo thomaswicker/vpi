@@ -1,2 +1,77 @@
 
 /* %%%%%%%%%%%%%%%%%%%% SUPERHERO STYLES %%%%%%%%%%%%%%%%%%%% */
+
+.superhero {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 450px;
+  padding-top: 100px;
+  text-align: center;
+  background-size: cover;
+  background-position: 0 -100px;
+
+  .logo {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    max-width: 200px;
+  }
+
+  h1 {
+    font-family: $font-3;
+    font-size: 3.5rem;
+    font-style: italic;
+    font-weight: 600;
+    color: white;
+  }
+
+  h2 {
+    float: none;
+    position: relative;
+    top: -20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: $font-1;
+    font-size: 20px;
+    color: white;
+    line-height: 135%;
+  }
+
+  a.btn {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+  }
+
+  &.superhero-home {
+    border-top: 4px solid $color-primary;
+    background-color: $color-secondary;
+    background-image: url('../img/superheroes/superhero-bg-home.jpg');
+  }
+
+  &.superhero-about {
+    border-top: 4px solid $color-about;
+    background-color: $color-secondary;
+    background-image: url('../img/superheroes/superhero-bg-about.jpg');
+  }
+
+  &.superhero-blog {
+    border-top: 4px solid $color-blog;
+    background-color: $color-secondary;
+    background-image: url('../img/superheroes/superhero-bg-blog.jpg');
+  }
+
+  &.superhero-solutions {
+    border-top: 4px solid $color-solutions;
+    background-color: $color-secondary;
+    background-image: url('../img/superheroes/superhero-bg-solutions.jpg');
+  }
+
+  &.superhero-contact {
+    border-top: 4px solid $color-contact;
+    background-color: $color-secondary;
+    background-image: url('../img/superheroes/superhero-bg-contact.jpg');
+  }
+}

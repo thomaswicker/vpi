@@ -1,2 +1,38 @@
 
 /* %%%%%%%%%%%%%%%%%%%% NAV STYLES %%%%%%%%%%%%%%%%%%%% */
+
+.site-nav {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+
+  ul {
+    background: red;
+
+    li {
+      float: left;
+      margin-right: $unit-md;
+      padding-bottom: 5px;
+
+      &.active {
+        border-bottom: 4px solid $color-primary;
+
+        a {
+          color: white;
+        }
+      }
+
+      a {
+        font-family: $font-1;
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #656668;
+
+        &:hover {
+          color: white;
+        }
+      }
+    }
+  }
+}

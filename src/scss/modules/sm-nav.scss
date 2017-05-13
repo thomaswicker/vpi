@@ -1,2 +1,49 @@
 
 /* %%%%%%%%%%%%%%%%%%%% SOCIAL MEDIA NAV STYLES %%%%%%%%%%%%%%%%%%%% */
+
+.sm-nav {
+  position: absolute;
+  left: 25px;
+  bottom: 25px;
+
+  li {
+    float: left;
+    margin-right: 15px;
+
+    a {
+      position: relative;
+      float: left;
+      width: 48px;
+      height: 48px;
+      background-color: #222222;
+      border-radius: 50%;
+      text-align: center;
+
+      &:hover {
+        background-color: #555555;
+        cursor: pointer;
+      }
+
+      i {
+        position: absolute;
+        font-family: FontAwesome;
+        font-size: 20px;
+        color: white;
+      }
+
+      &.sm-facebook {
+        i {
+          top: 15px;
+          left: 20px;
+        }
+      }
+
+      &.sm-twitter {
+        i {
+          top: 15px;
+          left: 15px;
+        }
+      }
+    }
+  }
+}

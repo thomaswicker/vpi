@@ -2,7 +2,7 @@
 /* %%%%%%%%%%%%%%%%%%%% GLOBAL SASS VARS %%%%%%%%%%%%%%%%%%%% */
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,300italic,300,100,500,500italic,700);
-@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300);
+@import url('https://fonts.googleapis.com/css?family=Lora');
 
 /* ==========================================================================
    %% Typography Variables %%
@@ -40,7 +40,7 @@ $font-1: 'Roboto', sans-serif;
 $font-2: Arial, 'Helvetica Neue', Helvetica, sans-serif;
 
 //secondary custom font family
-$font-3: 'Roboto Slab', serif;
+$font-3: 'Lora', serif;
 
 //often used for code blocks
 $font-4: "Courier New", Courier, monospace;
@@ -107,15 +107,14 @@ $xxdark-gray:         #222222;
 $xxxdark-gray:        #111111;
 $black:               #000000;
 
-$color-primary:       #101d30;
-$color-secondary:     #577d24;
-$color-secondary-alt: lighten($color-secondary, 10%);
+$color-primary:       #529ed5;
+$color-secondary:     #133850;
 $color-tertiary:      #8c9da7;
-$color-tertiary-alt:  #acd1e3;
-$color-tertiary-alt2: #5f7a8c;
-
-$color-electric-blue: $color-secondary;
-$color-electric-blue-original: #00aeef;
+$color-primary:       #529ed5;
+$color-about:         #ff8423;
+$color-blog:          #9e70af;
+$color-solutions:     #3da856;
+$color-contact:       #fad97b;
 
 $link:              $color-secondary;
 $text:              $xdark-gray;

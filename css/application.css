@@ -2,7 +2,7 @@
 /* #########%% GLOBAL %%######### */
 /* %%%%%%%%%%%%%%%%%%%% GLOBAL SASS VARS %%%%%%%%%%%%%%%%%%%% */
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,300italic,300,100,500,500italic,700);
-@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300);
+@import url("https://fonts.googleapis.com/css?family=Lora");
 /* ==========================================================================
    %% Typography Variables %%
    ========================================================================== */
@@ -122,7 +122,7 @@
    %% Clearfix %%
    ========================================================================== */
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,300italic,300,100,500,500italic,700);
-@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300);
+@import url("https://fonts.googleapis.com/css?family=Lora");
 /* ==========================================================================
    %% Prefixers %%
    ========================================================================== */
@@ -574,12 +574,12 @@ table {
    ========================================================================== */
 /* %%%%%%%%%%%%%%%%%%%% MAIN SCSS %%%%%%%%%%%%%%%%%%%% */
 html {
-  background-color: #101d30;
+  background-color: #529ed5;
   font-size: 100%;
   overflow-x: hidden; }
 
 body {
-  background-color: #101d30;
+  background-color: #529ed5;
   font-family: "Roboto", sans-serif;
   background-color: white;
   letter-spacing: normal;
@@ -618,7 +618,7 @@ ul li a:hover {
 .body-content-hold {
   float: left;
   width: 100%;
-  background-color: #577d24;
+  background-color: #133850;
   color: white;
   text-align: center; }
   .body-content-hold h1 {
@@ -900,9 +900,9 @@ ul li a:hover {
 .bg-color.black {
   background-color: #000000; }
 .bg-color.primary {
-  background-color: #101d30; }
+  background-color: #529ed5; }
 .bg-color.secondary {
-  background-color: #577d24; }
+  background-color: #133850; }
 
 /*
 _______   ______  _____
@@ -924,7 +924,7 @@ _______   ______  _____
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; }
 
 .font-3 {
-  font-family: "Roboto Slab", serif; }
+  font-family: "Lora", serif; }
 
 .font-4 {
   font-family: "Courier New", Courier, monospace; }
@@ -1020,7 +1020,7 @@ _______   ______  _____
 %% Body Text Color Helper Classes %%
 ========================================================================== */
 a {
-  color: #101d30;
+  color: #529ed5;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   text-decoration: none; }
   a:hover {
@@ -1054,9 +1054,9 @@ p.body-text {
 .text-color.black {
   color: #000000; }
 .text-color.primary {
-  color: #101d30; }
+  color: #529ed5; }
 .text-color.secondary {
-  color: #577d24; }
+  color: #133850; }
 
 /* #########%% LAYOUTS %%######### */
 /* %%%%%%%%%%%%%%%%%%%% HOME PAGE SPECIFIC STYLES %%%%%%%%%%%%%%%%%%%% */
@@ -1085,6 +1085,106 @@ p.body-text {
     position: relative;
     top: 40px; }
 
+.home-page-body {
+  float: left;
+  width: 100%;
+  padding: 25px 150px 40px 150px;
+  background-color: white; }
+  .home-page-body h1 {
+    font-size: 30px;
+    color: #133850;
+    text-align: left; }
+  .home-page-body p.body-text {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 135%;
+    color: #133850;
+    text-align: left; }
+  .home-page-body .three-pane-links {
+    float: left;
+    width: 100%;
+    margin-top: 1.563rem;
+    text-align: center; }
+    .home-page-body .three-pane-links li {
+      float: left;
+      width: 30%;
+      min-height: 300px;
+      margin-right: 3%;
+      padding-top: 65px;
+      background-size: cover;
+      background-repeat: no-repeat; }
+      .home-page-body .three-pane-links li:hover {
+        cursor: pointer; }
+      .home-page-body .three-pane-links li.plan {
+        background-image: url("../img/3-pane-links-plan.jpg"); }
+        .home-page-body .three-pane-links li.plan:hover {
+          background-image: url("../img/3-pane-links-plan-hover.jpg"); }
+      .home-page-body .three-pane-links li.invest {
+        background-image: url("../img/3-pane-links-invest.jpg"); }
+        .home-page-body .three-pane-links li.invest:hover {
+          background-image: url("../img/3-pane-links-invest-hover.jpg"); }
+      .home-page-body .three-pane-links li.live {
+        background-image: url("../img/3-pane-links-live.jpg"); }
+        .home-page-body .three-pane-links li.live:hover {
+          background-image: url("../img/3-pane-links-live-hover.jpg"); }
+      .home-page-body .three-pane-links li a {
+        width: 100%; }
+        .home-page-body .three-pane-links li a img {
+          margin-left: auto;
+          margin-right: auto;
+          margin-bottom: 10px; }
+        .home-page-body .three-pane-links li a span {
+          margin-left: auto;
+          margin-right: auto;
+          font-family: "Lora", serif;
+          font-size: 2.8rem;
+          font-weight: 500;
+          text-shadow: 2px 2px 2px #000;
+          color: white; }
+
+.home-page-blog-posts {
+  float: left;
+  width: 100%;
+  padding: 40px 150px 40px 150px;
+  background-image: url("../img/home-page-map.jpg");
+  background-size: cover; }
+  .home-page-blog-posts .hpbp--left {
+    float: left;
+    width: 70%; }
+    .home-page-blog-posts .hpbp--left h2 {
+      float: left;
+      width: auto;
+      margin-bottom: 5px;
+      padding-top: 5px;
+      font-family: "Roboto", sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      border-top: 3px solid #133850; }
+    .home-page-blog-posts .hpbp--left article.blog-post-mini {
+      float: left;
+      width: 100%;
+      margin-top: 20px;
+      padding: 10px 50px 0 0; }
+      .home-page-blog-posts .hpbp--left article.blog-post-mini h3 {
+        margin-bottom: 5px;
+        font-family: "Lora", serif;
+        font-size: 25px;
+        font-weight: 500;
+        color: #133850;
+        text-align: left; }
+      .home-page-blog-posts .hpbp--left article.blog-post-mini p {
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        font-size: 15px;
+        line-height: 140%;
+        color: #133850;
+        text-align: left; }
+      .home-page-blog-posts .hpbp--left article.blog-post-mini .btn {
+        margin-top: 20px; }
+  .home-page-blog-posts .hpbp--right {
+    float: left;
+    width: 30%; }
+
 /* %%%%%%%%%%%%%%%%%%%% ABOUT PAGE SPECIFIC STYLES %%%%%%%%%%%%%%%%%%%% */
 /* %%%%%%%%%%%%%%%%%%%% BLOG PAGE SPECIFIC STYLES %%%%%%%%%%%%%%%%%%%% */
 /* %%%%%%%%%%%%%%%%%%%% SOLUTIONS PAGE SPECIFIC STYLES %%%%%%%%%%%%%%%%%%%% */
@@ -1106,141 +1206,155 @@ p.body-text {
     cursor: pointer !important;
     text-decoration: none; }
   .btn.btn-primary {
-    background-color: #577d24;
+    background-color: #529ed5;
     color: white; }
     .btn.btn-primary:hover {
-      background-color: #73a52f;
+      background-color: #90c1e4;
       cursor: pointer; }
   .btn.btn-secondary {
-    background-color: #577d24;
+    background-color: #133850;
     color: white; }
     .btn.btn-secondary:hover {
-      background-color: #73a52f;
+      background-color: #22638e;
       color: white;
       cursor: pointer; }
   .btn.btn-tertiary {
     background-color: #8c9da7;
     color: white; }
     .btn.btn-tertiary:hover {
-      background-color: #6f8491;
+      background-color: #b7c2c8;
       cursor: pointer; }
 
-.btn-view-event {
-  margin-top: 1.25rem; }
-  @media only screen and (min-width: 640px) and (max-width: 1024px) {
-    .btn-view-event {
-      text-align: center;
-      font-size: 1.25rem; } }
-  @media only screen and (max-width: 640px) {
-    .btn-view-event {
-      width: 100%;
-      text-align: center;
-      font-size: 1rem; } }
-  .btn-view-event i {
-    margin-left: 8px; }
-
-.btn-back-to-team {
-  position: absolute;
-  top: -10px;
-  left: 0; }
-  .btn-back-to-team i {
-    margin-right: 8px;
-    color: #577d24 !important; }
-  @media only screen and (min-width: 640px) and (max-width: 1024px) {
-    .btn-back-to-team {
-      top: 25px; } }
-  @media only screen and (max-width: 640px) {
-    .btn-back-to-team {
-      top: 25px; } }
-
-.btn-view-careers {
-  float: left; }
-  @media only screen and (min-width: 640px) and (max-width: 1024px) {
-    .btn-view-careers {
-      width: 100%;
-      text-align: center;
-      font-size: 1.25rem; } }
-  @media only screen and (max-width: 640px) {
-    .btn-view-careers {
-      width: 100%;
-      text-align: center;
-      font-size: 1rem; } }
-  .btn-view-careers i {
-    margin-left: 8px; }
-
-.contact-btn-callout {
-  position: fixed;
-  top: 100px;
-  right: -98px;
-  padding: 1rem 0.9375rem;
-  background-color: #577d24;
-  color: white;
-  -webkit-transition: all 200ms ease;
-          transition: all 200ms ease;
-  z-index: 20; }
-  .contact-btn-callout:hover {
-    right: 0px;
-    background-color: #78ad32;
-    color: white; }
-    .contact-btn-callout:hover i {
-      margin-right: 0.3125rem; }
-  .contact-btn-callout i {
-    margin-right: 0.625rem;
-    font-size: 18px;
-    color: white; }
-
-.btn-back-to-news {
-  position: absolute;
-  top: -10px;
-  left: 0;
-  background-color: transparent !important;
-  color: #101d30 !important; }
-  .btn-back-to-news:hover {
-    color: #202e0d !important; }
-  .btn-back-to-news i {
-    margin-right: 8px;
-    color: #577d24 !important; }
+.btn-read-more {
+  padding: 0.3125rem 0.9375rem;
+  font-size: 13px; }
 
 /* %%%%%%%%%%%%%%%%%%%% FOOTER STYLES %%%%%%%%%%%%%%%%%%%% */
 footer {
   float: left;
   width: 100%;
   padding: 0.9375rem 0;
-  background-color: #101d30; }
-  footer .footer-left {
-    float: left;
-    width: 50%;
-    padding-left: 0.9375rem;
-    font-size: 0.875rem;
-    font-weight: 500; }
-    footer .footer-left p {
-      color: #ffffff; }
-      footer .footer-left p a {
-        color: #ffffff; }
-        footer .footer-left p a:hover {
-          color: #00aeef;
-          text-decoration: underline; }
-  footer .footer-right {
-    float: left;
-    width: 50%;
-    padding-right: 0.9375rem;
-    font-size: 0.875rem;
-    font-weight: 500;
-    text-align: right; }
-    footer .footer-right .copyright {
-      color: white; }
+  background-color: #529ed5; }
 
 /* %%%%%%%%%%%%%%%%%%%% HEADER STYLES %%%%%%%%%%%%%%%%%%%% */
 /* %%%%%%%%%%%%%%%%%%%% IMAGE STYLES %%%%%%%%%%%%%%%%%%%% */
 .body-content img {
   float: left;
   width: 100%;
-  border: 4px solid #101d30; }
+  border: 4px solid #529ed5; }
   @media only screen and (max-width: 640px) {
     .body-content img {
       width: 100%; } }
 
 /* %%%%%%%%%%%%%%%%%%%% NAV STYLES %%%%%%%%%%%%%%%%%%%% */
+.site-nav {
+  position: absolute;
+  top: 25px;
+  right: 25px; }
+  .site-nav ul {
+    background: red; }
+    .site-nav ul li {
+      float: left;
+      margin-right: 1.25rem;
+      padding-bottom: 5px; }
+      .site-nav ul li.active {
+        border-bottom: 4px solid #529ed5; }
+        .site-nav ul li.active a {
+          color: white; }
+      .site-nav ul li a {
+        font-family: "Roboto", sans-serif;
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: #656668; }
+        .site-nav ul li a:hover {
+          color: white; }
+
 /* %%%%%%%%%%%%%%%%%%%% SIDEBAR NAV STYLES %%%%%%%%%%%%%%%%%%%% */
 /* %%%%%%%%%%%%%%%%%%%% SOCIAL MEDIA NAV STYLES %%%%%%%%%%%%%%%%%%%% */
+.sm-nav {
+  position: absolute;
+  left: 25px;
+  bottom: 25px; }
+  .sm-nav li {
+    float: left;
+    margin-right: 15px; }
+    .sm-nav li a {
+      position: relative;
+      float: left;
+      width: 48px;
+      height: 48px;
+      background-color: #222222;
+      border-radius: 50%;
+      text-align: center; }
+      .sm-nav li a:hover {
+        background-color: #555555;
+        cursor: pointer; }
+      .sm-nav li a i {
+        position: absolute;
+        font-family: FontAwesome;
+        font-size: 20px;
+        color: white; }
+      .sm-nav li a.sm-facebook i {
+        top: 15px;
+        left: 20px; }
+      .sm-nav li a.sm-twitter i {
+        top: 15px;
+        left: 15px; }
+
 /* %%%%%%%%%%%%%%%%%%%% SUPERHERO STYLES %%%%%%%%%%%%%%%%%%%% */
+.superhero {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 450px;
+  padding-top: 100px;
+  text-align: center;
+  background-size: cover;
+  background-position: 0 -100px; }
+  .superhero .logo {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    max-width: 200px; }
+  .superhero h1 {
+    font-family: "Lora", serif;
+    font-size: 3.5rem;
+    font-style: italic;
+    font-weight: 600;
+    color: white; }
+  .superhero h2 {
+    float: none;
+    position: relative;
+    top: -20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    color: white;
+    line-height: 135%; }
+  .superhero a.btn {
+    position: absolute;
+    bottom: 25px;
+    right: 25px; }
+  .superhero.superhero-home {
+    border-top: 4px solid #529ed5;
+    background-color: #133850;
+    background-image: url("../img/superheroes/superhero-bg-home.jpg"); }
+  .superhero.superhero-about {
+    border-top: 4px solid #ff8423;
+    background-color: #133850;
+    background-image: url("../img/superheroes/superhero-bg-about.jpg"); }
+  .superhero.superhero-blog {
+    border-top: 4px solid #9e70af;
+    background-color: #133850;
+    background-image: url("../img/superheroes/superhero-bg-blog.jpg"); }
+  .superhero.superhero-solutions {
+    border-top: 4px solid #3da856;
+    background-color: #133850;
+    background-image: url("../img/superheroes/superhero-bg-solutions.jpg"); }
+  .superhero.superhero-contact {
+    border-top: 4px solid #fad97b;
+    background-color: #133850;
+    background-image: url("../img/superheroes/superhero-bg-contact.jpg"); }
