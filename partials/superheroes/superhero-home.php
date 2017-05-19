@@ -8,5 +8,5 @@
 
 	<?php get_template_part('partials/sm-nav'); ?>
 
-	<a href="/contact.php" class="btn btn-primary">Schedule an Appointment</a>
+	<a href="/contact" class="btn btn-primary">Schedule an Appointment</a>
 </section>

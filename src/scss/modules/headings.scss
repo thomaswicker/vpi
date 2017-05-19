@@ -1,0 +1,44 @@
+
+/* %%%%%%%%%%%%%%%%%%%% HEADER STYLES %%%%%%%%%%%%%%%%%%%% */
+
+h1 {
+  margin-bottom: $unit-xs;
+  font-family: $font-3;
+  font-size: 27px;
+  color: $color-secondary;
+  text-align: center;
+
+  span {
+    color: $color-primary;
+  }
+
+  @include mq(md) {
+
+  }
+
+  @include mq(sm) {
+    font-size: 22px;
+  }
+
+}
+
+h2 {
+  float: left;
+  width: auto;
+  margin-bottom: 5px;
+  padding-top: 5px;
+  font-family: $font-1;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+h3 {
+  margin-bottom: $unit-xs;
+  font-family: $font-1;
+  font-size: 14px;
+  font-weight: 600;
+  color: $color-secondary;
+  border-top: 4px solid $color-secondary;
+  text-align: left;
+  text-transform: uppercase;
+}

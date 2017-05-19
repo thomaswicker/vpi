@@ -123,8 +123,16 @@ p.body-text {
   width: 100%;
   margin-top: 0;
   font-family: $font-2;
-  font-size: $font-size;
+  font-size: .9rem;
   line-height: 140%;
+
+  &.body-text-bold {
+    font-weight: 600;
+  }
+
+  a {
+    text-decoration: underline;
+  }
 }
 
 

@@ -1,54 +1,52 @@
+
+
+
 <?php get_header(); ?>
-	
-	<div id="content">
-	
-	<?php if (have_posts()) : ?>
-		
-		<?php while (have_posts()) : the_post(); ?>
-		
-		<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			
-			<h1><a href="<?php the_permalink(); ?>" title="Permanent link: <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
-			
-			<?php get_template_part('inc/meta'); ?>
-			
-			<?php if (has_post_thumbnail()) the_post_thumbnail(); ?>
-			
-			<div class="entry">
-				
-				<?php the_content(); ?>
-				
-				<?php wp_link_pages(array('before' => 'Pages: ', 'next_or_number' => 'number')); ?>
-				
+
+<?php get_template_part('partials/superheroes/superhero-blog'); ?>
+
+<section class="blog-page-body">
+  <div class="bpb--left post-page">
+
+		<?php if (have_posts()) : ?>
+
+			<?php while (have_posts()) : the_post(); ?>
+
+			<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				<h1><?php the_title(); ?></h1>
+				<?php get_template_part('inc/meta'); ?>
+				<?php if (has_post_thumbnail()) the_post_thumbnail(); ?>
+
+				<div class="entry">
+					<?php the_content(); ?>
+					<?php wp_link_pages(array('before' => 'Pages: ', 'next_or_number' => 'number')); ?>
+				</div>
+
 			</div>
-			
-			<div class="postmetadata">
-				
-				<?php the_tags('<p>Tags: ', ', ', '</p>'); ?>
-				
-				<p>
-					<?php _e('Posted in', 'blank-theme'); ?> <?php the_category(', '); ?> | 
-					<?php comments_popup_link('Leave a comment', '1 comment', '% comments', 'comments-link', 'Comments disabled'); ?>
-				</p>
-				
-			</div>
-			
-		</div>
-		
-		<?php endwhile; ?>
-		
-		<?php get_template_part('inc/nav'); ?>
-		
-		<?php comments_template(); ?>
-		
-	<?php else : ?>
-		
-		<?php get_template_part('inc/gone'); ?>
-		
-	<?php endif; ?>
-	
+
+			<?php endwhile; ?>
+
+		<?php else : ?>
+
+			<?php get_template_part('inc/gone'); ?>
+
+		<?php endif; ?>
+
 	</div>
-	
-<?php get_sidebar(); ?>
+
+	<div class="bpb--right">
+		<ul class="blog-post-categories">
+			<?php if (('dynamic_sidebar') && dynamic_sidebar('post-page-sidebar')) : else : ?>
+
+			<div class="pre-widget">
+					<p><strong>Widgetized Area</strong></p>
+					<p>Something went wrong... widgets are not loading.</p>
+			</div>
+
+			<?php endif; ?>
+		</ul>
+	</div>
+
+</section>
 
 <?php get_footer(); ?>

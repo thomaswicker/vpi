@@ -1,2 +1,91 @@
 
 /* %%%%%%%%%%%%%%%%%%%% SIDEBAR NAV STYLES %%%%%%%%%%%%%%%%%%%% */
+
+.sd-social {
+  float: left;
+  width: 100%;
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
+.sidebar-nav {
+  position: absolute;
+  left: 0;
+  right: 0;
+
+  @include mq(md) {
+
+  }
+
+  @include mq(sm) {
+    position: static;
+    float: left;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 30px;
+  }
+
+  li {
+    position: relative;
+    float: left;
+    width: 100%;
+    min-height: 55px;
+    margin-top: $unit-xxs;
+    padding-top: $unit-md;
+    padding-bottom: $unit-md;
+    background-color: #cbd9df;
+    text-align: center;
+
+    @include mq(sm) {
+      float: left;
+      width: 96%;
+      margin-left: 2%;
+      margin-right: 2%;
+    }
+
+    &:hover {
+      background-color: $color-secondary;
+      cursor: pointer;
+
+      a {
+        color: $white;
+      }
+    }
+
+    a {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      padding-top: 20px;
+      text-decoration: uppercase;
+      font-family: $font-1;
+      font-size: 15px;
+      font-weight: 500;
+      color: #8ba4b0;
+      text-transform: uppercase;
+
+      @include mq(sm) {
+        float: left;
+        width: 96%;
+        margin-left: 2%;
+        margin-right: 2%;
+        font-size: 13px;
+      }
+    }
+
+    &.active {
+      background-color: $color-about;
+
+      &:hover {
+        cursor: default;
+      }
+
+      a {
+        color: $white;
+      }
+    }
+  }
+}

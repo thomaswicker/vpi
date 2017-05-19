@@ -2,7 +2,7 @@
 /* %%%%%%%%%%%%%%%%%%%% GLOBAL SASS VARS %%%%%%%%%%%%%%%%%%%% */
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,300italic,300,100,500,500italic,700);
-@import url('https://fonts.googleapis.com/css?family=Lora');
+@import url('https://fonts.googleapis.com/css?family=Tinos');
 
 /* ==========================================================================
    %% Typography Variables %%
@@ -40,7 +40,7 @@ $font-1: 'Roboto', sans-serif;
 $font-2: Arial, 'Helvetica Neue', Helvetica, sans-serif;
 
 //secondary custom font family
-$font-3: 'Lora', serif;
+$font-3: 'Tinos', serif;
 
 //often used for code blocks
 $font-4: "Courier New", Courier, monospace;
@@ -139,24 +139,28 @@ $form-focus: $xlight-gray;
    %% Media Query Variables %%
    ========================================================================== */
 
-// small range (0px --> 640px) ==> Good for mobile devices
+// small range (0px --> 767px) ==> Good for mobile devices
 $sm-start:   0px;
-$sm-end:     640px;
+$sm-end:     767px;
 
-// medium range (640px --> 1024px) ==> Good for tablet devices
-$md-start:  640px;
-$md-end:    1024px;
+// medium range (768px --> 992px) ==> Good for tablet devices
+$md-start:  768px;
+$md-end:    992px;
 
-// large range (1025px --> 1440px) ==> Good for portable & laptop devices
-$lg-start:   1025px;
-$lg-end:     1440px;
+// large range (993px --> 1200px) ==> Good for portable & laptop devices
+$lg-start:   993px;
+$lg-end:     1200px;
 
-// xlarge range (1441px --> 1992px)  ==> Good for large screens & desktop
-$xl-start:  90.1441px;
-$xl-end:    1992px;
+// xlarge range (1201px --> 1440px)  ==> Good for large screens & desktop
+$xl-start:  1201px;
+$xl-end:    1440px;
 
-// jumbo range (1993px --> up)  ==> Good for everything above large screens & desktop
-$jumbo-start:  1993px;
+// xlarge range (1441px --> 1920px)  ==> Good for large screens & desktop
+$xxl-start:  1441px;
+$xxl-end:    1920px;
+
+// jumbo range (1921px --> up)  ==> Good for everything above large screens & desktop
+$jumbo-start:  1923px;
 
 // Always declare site background fallback
 $site-background: $white;

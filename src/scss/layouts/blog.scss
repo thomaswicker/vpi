@@ -1,2 +1,141 @@
 
 /* %%%%%%%%%%%%%%%%%%%% BLOG PAGE SPECIFIC STYLES %%%%%%%%%%%%%%%%%%%% */
+
+.blog-page-body {
+  float: left;
+  width: 100%;
+  padding: 25px 150px 140px 150px;
+  background-color: $white;
+  text-align: left;
+
+  @include mq(xl) {
+  }
+
+  @include mq(lg) {
+  }
+
+  @include mq(md) {
+    padding: 10px 40px 90px 40px;
+  }
+
+  @include mq(sm) {
+    padding: 10px 20px 50px 20px;
+  }
+
+  h1 {
+    text-align: left;
+    font-style: italic;
+  }
+
+  p.body-text {
+    float: left;
+    width: 100%;
+    font-family: $font-2;
+    margin-bottom: $unit-sm;
+    text-align: left;
+  }
+
+  h4 {
+    float: left;
+    width: 100%;
+    text-align: left;
+    font-family: $font-1;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 500;
+    color: $color-secondary;
+  }
+
+  ul.about-list {
+    float: left;
+    width: 100%;
+    margin-bottom: $unit-md;
+    font-family: $font-2;
+    font-size: 16px;
+    list-style-type: disc;
+
+    li {
+      float: left;
+      width: 100%;
+      margin-top: $unit-sm;
+      margin-left: $unit-md;
+      padding-left: $unit-tiny;
+    }
+  }
+
+  .bpb--left {
+    float: left;
+    width: 70%;
+    padding-top: 10px;
+    border-right: 1px solid #DDD;
+  }
+
+  .bpb--right {
+    float: left;
+    width: 30%;
+    padding-top: 20px;
+    padding-left: 30px;
+
+    @include mq(md) {
+
+    }
+
+    @include mq(sm) {
+      padding-top: 20px;
+      padding-left: 15px;
+    }
+
+    h4 {
+      font-family: $font-1;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: $black;
+
+      @include mq(sm) {
+        font-size: 15px;
+      }
+    }
+
+    ul.blog-post-categories {
+      float: left;
+      width: 100%;
+      margin-left: 0;
+
+      li {
+        float: left;
+        width: 100%;
+        margin-top: $unit-xs;
+
+        a {
+          color: $color-primary;
+        }
+
+        span {
+          padding: 4px 6px;
+          font-family: $font-1;
+          font-size: 11px;
+          font-weight: 600;
+          background-color: #888;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+
+.blog-page-callout {
+  float: left;
+  width: 100%;
+  padding: 25px 150px 40px 150px;
+  background-color: $color-secondary;
+}
+
+.blog-page-footer-callout {
+  float: left;
+  width: 100%;
+  padding: 25px 150px 40px 150px;
+  background-color: #AAA;
+}

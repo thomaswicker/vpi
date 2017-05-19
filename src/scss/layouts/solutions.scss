@@ -1,2 +1,77 @@
 
 /* %%%%%%%%%%%%%%%%%%%% SOLUTIONS PAGE SPECIFIC STYLES %%%%%%%%%%%%%%%%%%%% */
+
+.solutions-page-body {
+  float: left;
+  width: 100%;
+  padding: 25px 500px 100px 150px;
+  background-color: $white;
+  text-align: left;
+
+  @include mq(md) {
+    padding: 25px 400px 40px 30px;
+  }
+
+  @include mq(sm) {
+    padding: 25px 20px 40px 20px;
+  }
+
+  h1 {
+    text-align: left;
+
+    @include mq(sm) {
+      font-size: 20px;
+    }
+  }
+
+  p.body-text {
+    float: left;
+    width: 100%;
+    font-family: $font-2;
+    margin-bottom: $unit-sm;
+    text-align: left;
+  }
+
+  h4 {
+    float: left;
+    width: 100%;
+    text-align: left;
+    font-family: $font-3;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 600;
+    color: $color-secondary;
+  }
+
+  ul {
+    float: left;
+    width: 100%;
+    margin-bottom: $unit-md;
+    font-family: $font-2;
+    font-size: 16px;
+    list-style-type: disc;
+
+    li {
+      float: left;
+      width: 100%;
+      margin-top: $unit-sm;
+      margin-left: $unit-md;
+      padding-left: $unit-tiny;
+    }
+  }
+}
+
+
+.solutions-page-callout {
+  float: left;
+  width: 100%;
+  padding: 25px 150px 40px 150px;
+  background-color: $color-secondary;
+}
+
+.solutions-page-footer-callout {
+  float: left;
+  width: 100%;
+  padding: 25px 150px 40px 150px;
+  background-color: #AAA;
+}

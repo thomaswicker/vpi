@@ -5,50 +5,206 @@
   position: relative;
   float: left;
   width: 100%;
-  min-height: 450px;
-  padding-top: 100px;
+  min-height: 375px;
+  padding-top: 90px;
   text-align: center;
   background-size: cover;
-  background-position: 0 -100px;
+
+  @include mq(xl) {
+
+  }
+
+  @include mq(lg) {
+
+  }
+
+  @include mq(md) {
+    min-height: 325px;
+    padding-top: 80px;
+  }
+
+  @include mq(sm) {
+    min-height: 275px;
+    padding-top: 70px;
+  }
 
   .logo {
     position: absolute;
-    top: 25px;
-    left: 25px;
-    max-width: 200px;
+    top: 8px;
+    left: 15px;
+    max-width: 175px;
   }
 
   h1 {
     font-family: $font-3;
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-style: italic;
     font-weight: 600;
     color: white;
+    text-shadow: 2px 2px 3px #000;
+    text-align: left;
+
+    @include mq(md) {
+      margin-top: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+      font-size: 2.5rem;
+    }
+
+    @include mq(sm) {
+      padding-left: 20px;
+      padding-right: 20px;
+      font-size: 2.2rem;
+    }
   }
 
   h2 {
     float: none;
     position: relative;
-    top: -20px;
-    max-width: 600px;
+    top: 0px;
+    max-width: 500px;
     margin-left: auto;
     margin-right: auto;
-    font-family: $font-1;
-    font-size: 20px;
+    font-size: 15px;
     color: white;
     line-height: 135%;
+    text-align: left;
+
+    @include mq(sm) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
   }
 
   a.btn {
     position: absolute;
     bottom: 25px;
     right: 25px;
+    padding: 15px 25px;
+    font-size: 12px;
+
+    @include mq(xl) {
+
+    }
+
+    @include mq(lg) {
+
+    }
+
+    @include mq(md) {
+      bottom: 15px;
+      right: 15px;
+    }
+
+    @include mq(sm) {
+      display: none;
+    }
+  }
+
+  .superhero--left {
+    float: left;
+    width: calc(100% - 400px);
+
+    @include mq(xl) {
+
+    }
+
+    @include mq(lg) {
+
+    }
+
+    @include mq(md) {
+      width: calc(100% - 300px);
+    }
+
+    @include mq(sm) {
+      float: left;
+      width: 100%;
+    }
+
+    h1 {
+      float: left;
+      width: 100%;
+      padding-left: 150px;
+      text-align: left;
+
+      @include mq(md) {
+        margin-top: 10px;
+        padding-left: 25px;
+      }
+
+      @include mq(sm) {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding-left: 30px;
+        text-align: center;
+      }
+    }
+
+    h2 {
+      float: left;
+      width: 100%;
+      max-width: 900px;
+      padding-left: 150px;
+      padding-right: 50px;
+      text-align: left;
+
+      @include mq(md) {
+        padding-left: 25px;
+      }
+
+      @include mq(sm) {
+        margin-bottom: 30px;
+        padding: 0px 30px 0px 30px;
+        font-size: 13px;
+        text-align: center;
+      }
+    }
+  }
+
+  .superhero--right {
+    position: relative;
+    top: 100px;
+    right: 0px;
+    float: left;
+    width: 350px;
+
+    @include mq(xl) {
+
+    }
+
+    @include mq(lg) {
+
+    }
+
+    @include mq(md) {
+      top: 50px;
+      right: 30px;
+      width: 300px;
+    }
+
+    @include mq(sm) {
+      top: auto;
+      right: auto;
+      float: left;
+      width: 100%;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    img {
+      border: 4px solid $white;
+    }
   }
 
   &.superhero-home {
     border-top: 4px solid $color-primary;
     background-color: $color-secondary;
     background-image: url('../img/superheroes/superhero-bg-home.jpg');
+
+    h1, h2 {
+      text-align: center;
+    }
   }
 
   &.superhero-about {
@@ -61,17 +217,29 @@
     border-top: 4px solid $color-blog;
     background-color: $color-secondary;
     background-image: url('../img/superheroes/superhero-bg-blog.jpg');
+
+    h1, h2 {
+      text-align: center;
+    }
   }
 
   &.superhero-solutions {
     border-top: 4px solid $color-solutions;
     background-color: $color-secondary;
     background-image: url('../img/superheroes/superhero-bg-solutions.jpg');
+
+    .superhero--right .sidebar-nav li.active {
+      background-color: $color-solutions;
+    }
   }
 
   &.superhero-contact {
     border-top: 4px solid $color-contact;
     background-color: $color-secondary;
     background-image: url('../img/superheroes/superhero-bg-contact.jpg');
+
+    h1, h2 {
+      text-align: center;
+    }
   }
 }

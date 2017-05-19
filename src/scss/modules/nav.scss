@@ -1,24 +1,111 @@
 
 /* %%%%%%%%%%%%%%%%%%%% NAV STYLES %%%%%%%%%%%%%%%%%%%% */
 
+#site-nav-toggle {
+  position: fixed;
+  top: 5px;
+  right: 20px;
+  padding: 10px;
+  background-color: $color-primary;
+  z-index: 100;
+  display: none;
+
+  &:hover {
+    background-color: lighten($color-primary, 10%);
+    cursor: pointer;
+  }
+
+  @include mq(sm) {
+    display: block;
+  }
+
+  i {
+    color: $white;
+  }
+}
+
 .site-nav {
-  position: absolute;
+  position: fixed;
   top: 25px;
   right: 25px;
+  transition: all 200ms ease;
+
+  @include mq(sm) {
+    top: -500px;
+    right: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, .95);
+    border-bottom: 4px solid $color-primary;
+    z-index: 1000000;
+
+    &.active {
+      top: 0;
+    }
+  }
+
+  header {
+    float: left;
+    width: 100%;
+    min-height: 50px;
+    padding-bottom: 20px;
+    background-color: $color-secondary;
+    display: none;
+
+    @include mq(md) {
+      display: block;
+    }
+
+    @include mq(sm) {
+      display: block;
+    }
+
+    .logo-mobile {
+      position: absolute;
+      top: 5px;
+      left: 15px;
+      max-width: 130px;
+    }
+  }
 
   ul {
-    background: red;
-
     li {
       float: left;
       margin-right: $unit-md;
       padding-bottom: 5px;
 
+      @include mq(sm) {
+        width: 100%;
+        margin-right: 0;
+        padding-bottom: 0;
+      }
+
+      &.login-btn {
+        padding-left: 15px;
+        border-left: 1px solid #888;
+
+        @include mq(sm) {
+          padding-left: 0;
+          border-left: 0;
+        }
+      }
+
       &.active {
         border-bottom: 4px solid $color-primary;
 
-        a {
+        @include mq(sm) {
+          background-color: $color-primary;
           color: white;
+          border-bottom: 0px !important;
+        }
+
+        a {
+          color: $white;
+
+          &:hover {
+            background-color: $color-primary;
+            color: white;
+            cursor: default;
+          }
         }
       }
 
@@ -27,12 +114,44 @@
         font-size: 14px;
         font-weight: 500;
         text-transform: uppercase;
-        color: #656668;
+        color: lighten($color-secondary, 15%);
+
+        @include mq(sm) {
+          float: left;
+          width: 100%;
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
 
         &:hover {
+          background-color: $color-secondary;
           color: white;
         }
       }
+    }
+  }
+
+  &.site-nav-about {
+    ul li.active {
+      border-bottom: 4px solid $color-about;
+    }
+  }
+
+  &.site-nav-blog {
+    ul li.active {
+      border-bottom: 4px solid $color-blog;
+    }
+  }
+
+  &.site-nav-solutions {
+    ul li.active {
+      border-bottom: 4px solid $color-solutions;
+    }
+  }
+
+  &.site-nav-contact {
+    ul li.active {
+      border-bottom: 4px solid $color-contact;
     }
   }
 }

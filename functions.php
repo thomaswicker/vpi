@@ -40,57 +40,114 @@ function theme_js() {
 
 // END - LOAD THEME JS
 
+function custom_pagination($numpages = '', $pagerange = '', $paged='') {
+
+  if (empty($pagerange)) {
+    $pagerange = 2;
+  }
+
+  /**
+   * This first part of our function is a fallback
+   * for custom pagination inside a regular loop that
+   * uses the global $paged and global $wp_query variables.
+   *
+   * It's good because we can now override default pagination
+   * in our theme, and use this function in default quries
+   * and custom queries.
+   */
+  global $paged;
+  if (empty($paged)) {
+    $paged = 1;
+  }
+  if ($numpages == '') {
+    global $wp_query;
+    $numpages = $wp_query->max_num_pages;
+    if(!$numpages) {
+        $numpages = 1;
+    }
+  }
+
+  /**
+   * We construct the pagination arguments to enter into our paginate_links
+   * function.
+   */
+  $pagination_args = array(
+    'base'            => get_pagenum_link(1) . '%_%',
+    'format'          => 'page/%#%',
+    'total'           => $numpages,
+    'current'         => $paged,
+    'show_all'        => False,
+    'end_size'        => 1,
+    'mid_size'        => $pagerange,
+    'prev_next'       => True,
+    'prev_text'       => __('&laquo;'),
+    'next_text'       => __('&raquo;'),
+    'type'            => 'plain',
+    'add_args'        => false,
+    'add_fragment'    => ''
+  );
+
+  $paginate_links = paginate_links($pagination_args);
+
+  if ($paginate_links) {
+    echo "<nav class='custom-pagination'>";
+      echo "<span class='page-numbers page-num'>Page " . $paged . " of " . $numpages . "</span> ";
+      echo $paginate_links;
+    echo "</nav>";
+  }
+}
+
 function register_my_menu() {
   register_nav_menu('main-menu',__( 'Main Menu' ));
 }
 add_action( 'init', 'register_my_menu' );
 
-// BEGIN CUSTOM ADMIN DASHBOARD HEADER LOGO
-function custom_admin_logo() {
-    echo '
-        <style type="text/css">
-            #header-logo { background-image: url('.get_bloginfo('stylesheet_directory').'/images/login_logo.png) !important; }
-        </style>
-    ';
+
+if ( function_exists( 'add_image_size' ) ) add_theme_support( 'post-thumbnails' );
+if ( function_exists( 'add_image_size' ) ) {
+    add_image_size( 'excerpt-thumb', 0, 100, false );
+    // define excerpt-thumb size here
+    // in the example: 100px wide, height adjusts automatically, no cropping
 }
-add_action('admin_head', 'custom_admin_logo');
-// END CUSTOM ADMIN DASHBOARD HEADER LOGO
 
 
-
-// BEGIN EDIT FOOTER TEXT
- function remove_footer_admin () {
-    echo '<span id="footer-thankyou">Site by <a href="http://www.xiri.io" target="_blank">XIRI Media, LLC</a></span>';
+// Changing excerpt length for posts on home page...
+function new_excerpt_length($length) {
+  return 150;
+    // define length of excerpt in number of words
 }
-add_filter('admin_footer_text', 'remove_footer_admin');
-// END EDIT FOOTER TEXT
+add_filter('excerpt_length', 'new_excerpt_length');
 
 
 
-/* BEGIN ENABLE CUSTOM MENUS */
 
-add_theme_support( 'menus' );
+// Changing excerpt more
+function new_excerpt_more($more) {
+return '...';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
 
-// Function for creating Widgets
-function create_widget($name, $id, $description) {
+
+if (function_exists('register_sidebar')) {
   register_sidebar(array(
-      'name' => __( $name ),
-      'id' => $id,
-      'description' => __( $description ),
-      'before_widget' => ' ',
-      'after_widget' => ' ',
-      'before_title' => '<h5>',
-      'after_title' => '</h5>'
+    'name' => 'post-page-sidebar',
+    'id'   => 'post-page-sidebar',
+    'description'   => 'This is a widgetized area.',
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h4>',
+    'after_title'   => '</h4>'
   ));
 }
 
-/* END ENABLE CUSTOM MENUS */
-
-
-// Create widgets in the footer
-create_widget("Left Footer", "footer_left", "Displays in the left of the footer");
-create_widget("Middle Footer", "footer_middle", "Displays in the middle of the footer");
-create_widget("Right Footer", "footer_right", "Displays in the right of the footer");
-
+// add google analytics to footer
+// function add_google_analytics() {
+// 	echo '<script src="http://www.google-analytics.com/ga.js" type="text/javascript"></script>';
+// 	echo '<script type="text/javascript">';
+// 	echo 'var pageTracker = _gat._getTracker("UA-XXXXX-X");';
+// 	echo 'pageTracker._trackPageview();';
+// 	echo '</script>';
+// }
+// add_action('wp_footer', 'add_google_analytics');
 
 ?>

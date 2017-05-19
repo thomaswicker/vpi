@@ -9,3 +9,4 @@
 	</head>
 
 	<body class="hold-image">
+		<?php include_once("analyticstracking.php") ?>

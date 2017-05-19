@@ -2,7 +2,7 @@
 /* #########%% GLOBAL %%######### */
 /* %%%%%%%%%%%%%%%%%%%% GLOBAL SASS VARS %%%%%%%%%%%%%%%%%%%% */
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,300italic,300,100,500,500italic,700);
-@import url("https://fonts.googleapis.com/css?family=Lora");
+@import url("https://fonts.googleapis.com/css?family=Tinos");
 /* ==========================================================================
    %% Typography Variables %%
    ========================================================================== */
@@ -122,7 +122,7 @@
    %% Clearfix %%
    ========================================================================== */
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,300italic,300,100,500,500italic,700);
-@import url("https://fonts.googleapis.com/css?family=Lora");
+@import url("https://fonts.googleapis.com/css?family=Tinos");
 /* ==========================================================================
    %% Prefixers %%
    ========================================================================== */
@@ -629,29 +629,29 @@ ul li a:hover {
 .body-content .body-content-left {
   float: left;
   width: 250px; }
-  @media only screen and (min-width: 640px) and (max-width: 1024px) {
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
     .body-content .body-content-left {
       width: 100%; } }
-  @media only screen and (max-width: 640px) {
+  @media only screen and (max-width: 767px) {
     .body-content .body-content-left {
       width: 100%; } }
   .body-content .body-content-left img {
     margin-top: 0; }
-    @media only screen and (min-width: 640px) and (max-width: 1024px) {
+    @media only screen and (min-width: 768px) and (max-width: 992px) {
       .body-content .body-content-left img {
         margin-bottom: 25px; } }
-    @media only screen and (max-width: 640px) {
+    @media only screen and (max-width: 767px) {
       .body-content .body-content-left img {
         margin-bottom: 25px; } }
 .body-content .body-content-right {
   float: left;
   width: calc(100% - 250px);
   padding-left: 1.563rem; }
-  @media only screen and (min-width: 640px) and (max-width: 1024px) {
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
     .body-content .body-content-right {
       width: 100%;
       padding-left: 0; } }
-  @media only screen and (max-width: 640px) {
+  @media only screen and (max-width: 767px) {
     .body-content .body-content-right {
       width: 100%;
       padding-left: 0; } }
@@ -662,10 +662,10 @@ ul li a:hover {
   .body-content ul.areas-of-expertise h3 {
     font-size: 20px;
     font-weight: 600; }
-    @media only screen and (min-width: 640px) and (max-width: 1024px) {
+    @media only screen and (min-width: 768px) and (max-width: 992px) {
       .body-content ul.areas-of-expertise h3 {
         font-size: 17px; } }
-    @media only screen and (max-width: 640px) {
+    @media only screen and (max-width: 767px) {
       .body-content ul.areas-of-expertise h3 {
         font-size: 17px; } }
   .body-content ul.areas-of-expertise li {
@@ -924,7 +924,7 @@ _______   ______  _____
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; }
 
 .font-3 {
-  font-family: "Lora", serif; }
+  font-family: "Tinos", serif; }
 
 .font-4 {
   font-family: "Courier New", Courier, monospace; }
@@ -1031,8 +1031,12 @@ p.body-text {
   width: 100%;
   margin-top: 0;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 1rem;
+  font-size: .9rem;
   line-height: 140%; }
+  p.body-text.body-text-bold {
+    font-weight: 600; }
+  p.body-text a {
+    text-decoration: underline; }
 
 /* ==========================================================================
 %% Font Color Helper Classes %%
@@ -1090,9 +1094,22 @@ p.body-text {
   width: 100%;
   padding: 25px 150px 40px 150px;
   background-color: white; }
+  @media only screen and (min-width: 1201px) and (max-width: 1440px) {
+    .home-page-body {
+      padding: 40px 150px 30px 150px; } }
+  @media only screen and (min-width: 993px) and (max-width: 1200px) {
+    .home-page-body {
+      padding: 40px 90px 30px 90px; } }
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
+    .home-page-body {
+      padding: 40px 60px 30px 60px; } }
+  @media only screen and (max-width: 767px) {
+    .home-page-body {
+      padding: 20px 25px 30px 25px; } }
   .home-page-body h1 {
-    font-size: 30px;
-    color: #133850;
+    font-family: "Tinos", serif;
+    font-size: 25px;
+    font-weight: 500;
     text-align: left; }
   .home-page-body p.body-text {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -1103,16 +1120,22 @@ p.body-text {
   .home-page-body .three-pane-links {
     float: left;
     width: 100%;
-    margin-top: 1.563rem;
+    margin-top: 1.875rem;
     text-align: center; }
     .home-page-body .three-pane-links li {
       float: left;
-      width: 30%;
-      min-height: 300px;
-      margin-right: 3%;
-      padding-top: 65px;
+      width: 33.33%;
+      min-height: 250px;
+      padding-top: 35px;
       background-size: cover;
-      background-repeat: no-repeat; }
+      background-repeat: no-repeat;
+      border: 6px solid #ffffff; }
+      @media only screen and (max-width: 767px) {
+        .home-page-body .three-pane-links li {
+          width: 100%;
+          min-height: 300px;
+          margin-bottom: 1.25rem;
+          padding-top: 60px; } }
       .home-page-body .three-pane-links li:hover {
         cursor: pointer; }
       .home-page-body .three-pane-links li.plan {
@@ -1136,7 +1159,7 @@ p.body-text {
         .home-page-body .three-pane-links li a span {
           margin-left: auto;
           margin-right: auto;
-          font-family: "Lora", serif;
+          font-family: "Tinos", serif;
           font-size: 2.8rem;
           font-weight: 500;
           text-shadow: 2px 2px 2px #000;
@@ -1145,50 +1168,448 @@ p.body-text {
 .home-page-blog-posts {
   float: left;
   width: 100%;
-  padding: 40px 150px 40px 150px;
+  padding: 40px 150px 30px 150px;
   background-image: url("../img/home-page-map.jpg");
   background-size: cover; }
+  @media only screen and (min-width: 1201px) and (max-width: 1440px) {
+    .home-page-blog-posts {
+      padding: 40px 150px 30px 150px; } }
+  @media only screen and (min-width: 993px) and (max-width: 1200px) {
+    .home-page-blog-posts {
+      padding: 40px 90px 30px 90px; } }
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
+    .home-page-blog-posts {
+      padding: 40px 60px 30px 60px; } }
+  @media only screen and (max-width: 767px) {
+    .home-page-blog-posts {
+      padding: 20px 25px 30px 25px; } }
   .home-page-blog-posts .hpbp--left {
     float: left;
-    width: 70%; }
-    .home-page-blog-posts .hpbp--left h2 {
-      float: left;
-      width: auto;
-      margin-bottom: 5px;
-      padding-top: 5px;
-      font-family: "Roboto", sans-serif;
-      font-size: 14px;
-      font-weight: 600;
-      text-transform: uppercase;
-      border-top: 3px solid #133850; }
-    .home-page-blog-posts .hpbp--left article.blog-post-mini {
+    width: 70%;
+    padding-right: 55px; }
+    @media only screen and (max-width: 767px) {
+      .home-page-blog-posts .hpbp--left {
+        width: 100%;
+        padding-right: 0px; } }
+    .home-page-blog-posts .hpbp--left .post-header-container {
       float: left;
       width: 100%;
-      margin-top: 20px;
-      padding: 10px 50px 0 0; }
-      .home-page-blog-posts .hpbp--left article.blog-post-mini h3 {
-        margin-bottom: 5px;
-        font-family: "Lora", serif;
-        font-size: 25px;
-        font-weight: 500;
-        color: #133850;
-        text-align: left; }
-      .home-page-blog-posts .hpbp--left article.blog-post-mini p {
-        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-        font-size: 15px;
-        line-height: 140%;
-        color: #133850;
-        text-align: left; }
-      .home-page-blog-posts .hpbp--left article.blog-post-mini .btn {
-        margin-top: 20px; }
+      margin-bottom: 15px; }
+      .home-page-blog-posts .hpbp--left .post-header-container h3 {
+        padding-top: 5px;
+        max-width: 85px; }
   .home-page-blog-posts .hpbp--right {
     float: left;
-    width: 30%; }
+    width: 30%;
+    text-align: center; }
+    @media only screen and (max-width: 767px) {
+      .home-page-blog-posts .hpbp--right {
+        width: 100%;
+        padding: 0px; } }
 
 /* %%%%%%%%%%%%%%%%%%%% ABOUT PAGE SPECIFIC STYLES %%%%%%%%%%%%%%%%%%%% */
+.about-page-body {
+  float: left;
+  width: 100%;
+  padding: 25px 500px 40px 150px;
+  background-color: #ffffff;
+  text-align: left; }
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
+    .about-page-body {
+      padding: 25px 400px 40px 30px; } }
+  @media only screen and (max-width: 767px) {
+    .about-page-body {
+      padding: 25px 20px 40px 20px; } }
+  .about-page-body h1 {
+    text-align: left; }
+  .about-page-body p.body-text {
+    float: left;
+    width: 100%;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    margin-bottom: 0.9375rem;
+    text-align: left; }
+  .about-page-body h4 {
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+    font-family: "Tinos", serif;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 140%;
+    color: #133850; }
+    @media only screen and (max-width: 767px) {
+      .about-page-body h4 {
+        font-size: 17px; } }
+  .about-page-body ul.about-list {
+    float: left;
+    width: 100%;
+    margin-bottom: 1.25rem;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 16px;
+    list-style-type: disc; }
+    .about-page-body ul.about-list li {
+      float: left;
+      width: 100%;
+      margin-top: 0.9375rem;
+      margin-left: 1.25rem;
+      padding-left: 0.125rem; }
+
+.about-page-callout {
+  float: left;
+  width: 100%;
+  padding: 25px 150px 20px 150px;
+  background-color: #133850; }
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
+    .about-page-callout {
+      padding: 25px 40px 20px 40px; } }
+  @media only screen and (max-width: 767px) {
+    .about-page-callout {
+      padding: 25px 20px 20px 20px; } }
+  .about-page-callout h3, .about-page-callout h5, .about-page-callout p.apc--text {
+    float: left;
+    width: 100%;
+    text-align: left; }
+  .about-page-callout h3 {
+    max-width: 93px;
+    padding-top: 5px;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    color: #ff8423;
+    text-transform: uppercase;
+    border-top: 3px solid #ff8423; }
+  .about-page-callout h5 {
+    margin-top: 5px;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff; }
+  .about-page-callout p.apc--text {
+    margin-top: 5px;
+    margin-bottom: 20px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 13px;
+    color: #ffffff; }
+
 /* %%%%%%%%%%%%%%%%%%%% BLOG PAGE SPECIFIC STYLES %%%%%%%%%%%%%%%%%%%% */
+.blog-page-body {
+  float: left;
+  width: 100%;
+  padding: 25px 150px 140px 150px;
+  background-color: #ffffff;
+  text-align: left; }
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
+    .blog-page-body {
+      padding: 10px 40px 90px 40px; } }
+  @media only screen and (max-width: 767px) {
+    .blog-page-body {
+      padding: 10px 20px 50px 20px; } }
+  .blog-page-body h1 {
+    text-align: left;
+    font-style: italic; }
+  .blog-page-body p.body-text {
+    float: left;
+    width: 100%;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    margin-bottom: 0.9375rem;
+    text-align: left; }
+  .blog-page-body h4 {
+    float: left;
+    width: 100%;
+    text-align: left;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 500;
+    color: #133850; }
+  .blog-page-body ul.about-list {
+    float: left;
+    width: 100%;
+    margin-bottom: 1.25rem;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 16px;
+    list-style-type: disc; }
+    .blog-page-body ul.about-list li {
+      float: left;
+      width: 100%;
+      margin-top: 0.9375rem;
+      margin-left: 1.25rem;
+      padding-left: 0.125rem; }
+  .blog-page-body .bpb--left {
+    float: left;
+    width: 70%;
+    padding-top: 10px;
+    border-right: 1px solid #DDD; }
+  .blog-page-body .bpb--right {
+    float: left;
+    width: 30%;
+    padding-top: 20px;
+    padding-left: 30px; }
+    @media only screen and (max-width: 767px) {
+      .blog-page-body .bpb--right {
+        padding-top: 20px;
+        padding-left: 15px; } }
+    .blog-page-body .bpb--right h4 {
+      font-family: "Roboto", sans-serif;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: #000000; }
+      @media only screen and (max-width: 767px) {
+        .blog-page-body .bpb--right h4 {
+          font-size: 15px; } }
+    .blog-page-body .bpb--right ul.blog-post-categories {
+      float: left;
+      width: 100%;
+      margin-left: 0; }
+      .blog-page-body .bpb--right ul.blog-post-categories li {
+        float: left;
+        width: 100%;
+        margin-top: 0.625rem; }
+        .blog-page-body .bpb--right ul.blog-post-categories li a {
+          color: #529ed5; }
+        .blog-page-body .bpb--right ul.blog-post-categories li span {
+          padding: 4px 6px;
+          font-family: "Roboto", sans-serif;
+          font-size: 11px;
+          font-weight: 600;
+          background-color: #888;
+          color: white; }
+
+.blog-page-callout {
+  float: left;
+  width: 100%;
+  padding: 25px 150px 40px 150px;
+  background-color: #133850; }
+
+.blog-page-footer-callout {
+  float: left;
+  width: 100%;
+  padding: 25px 150px 40px 150px;
+  background-color: #AAA; }
+
 /* %%%%%%%%%%%%%%%%%%%% SOLUTIONS PAGE SPECIFIC STYLES %%%%%%%%%%%%%%%%%%%% */
+.solutions-page-body {
+  float: left;
+  width: 100%;
+  padding: 25px 500px 100px 150px;
+  background-color: #ffffff;
+  text-align: left; }
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
+    .solutions-page-body {
+      padding: 25px 400px 40px 30px; } }
+  @media only screen and (max-width: 767px) {
+    .solutions-page-body {
+      padding: 25px 20px 40px 20px; } }
+  .solutions-page-body h1 {
+    text-align: left; }
+    @media only screen and (max-width: 767px) {
+      .solutions-page-body h1 {
+        font-size: 20px; } }
+  .solutions-page-body p.body-text {
+    float: left;
+    width: 100%;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    margin-bottom: 0.9375rem;
+    text-align: left; }
+  .solutions-page-body h4 {
+    float: left;
+    width: 100%;
+    text-align: left;
+    font-family: "Tinos", serif;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 600;
+    color: #133850; }
+  .solutions-page-body ul {
+    float: left;
+    width: 100%;
+    margin-bottom: 1.25rem;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 16px;
+    list-style-type: disc; }
+    .solutions-page-body ul li {
+      float: left;
+      width: 100%;
+      margin-top: 0.9375rem;
+      margin-left: 1.25rem;
+      padding-left: 0.125rem; }
+
+.solutions-page-callout {
+  float: left;
+  width: 100%;
+  padding: 25px 150px 40px 150px;
+  background-color: #133850; }
+
+.solutions-page-footer-callout {
+  float: left;
+  width: 100%;
+  padding: 25px 150px 40px 150px;
+  background-color: #AAA; }
+
 /* %%%%%%%%%%%%%%%%%%%% CONTACT PAGE SPECIFIC STYLES %%%%%%%%%%%%%%%%%%%% */
+.contact-page-body {
+  float: left;
+  width: 100%;
+  padding: 65px 150px 100px 150px;
+  background-color: #ffffff;
+  text-align: left; }
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
+    .contact-page-body {
+      padding: 65px 40px 100px 40px; } }
+  @media only screen and (max-width: 767px) {
+    .contact-page-body {
+      padding: 35px 20px 50px 20px; } }
+  .contact-page-body .cpb--left {
+    float: left;
+    width: 350px; }
+    @media only screen and (max-width: 767px) {
+      .contact-page-body .cpb--left {
+        width: 100%;
+        padding-bottom: 40px; } }
+    .contact-page-body .cpb--left h2 {
+      float: left;
+      width: 100%; }
+    .contact-page-body .cpb--left .cpb-photo {
+      float: left;
+      width: 140px; }
+      .contact-page-body .cpb--left .cpb-photo img {
+        max-width: 120px; }
+    .contact-page-body .cpb--left .cpb-details {
+      float: left;
+      width: calc(100% - 150px);
+      padding-top: 20px; }
+      .contact-page-body .cpb--left .cpb-details h4, .contact-page-body .cpb--left .cpb-details .title, .contact-page-body .cpb--left .cpb-details .company-name, .contact-page-body .cpb--left .cpb-details .email, .contact-page-body .cpb--left .cpb-details .phone {
+        float: left;
+        width: 100%;
+        margin-bottom: 4px;
+        text-align: left; }
+      .contact-page-body .cpb--left .cpb-details h4 {
+        font-family: "Tinos", serif;
+        font-size: 21px;
+        font-style: normal;
+        font-weight: 600;
+        color: #000000; }
+      .contact-page-body .cpb--left .cpb-details .title {
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        font-style: italic;
+        font-weight: 500;
+        color: #999; }
+      .contact-page-body .cpb--left .cpb-details .company-name {
+        font-family: "Roboto", sans-serif;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 500;
+        color: #000000; }
+      .contact-page-body .cpb--left .cpb-details .email {
+        margin-top: 5px;
+        font-family: "Roboto", sans-serif;
+        font-size: 13px;
+        font-style: normal;
+        text-transform: uppercase;
+        font-weight: 500; }
+        .contact-page-body .cpb--left .cpb-details .email i {
+          margin-right: 4px; }
+      .contact-page-body .cpb--left .cpb-details .phone {
+        margin-top: 5px;
+        font-family: "Roboto", sans-serif;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 500; }
+        .contact-page-body .cpb--left .cpb-details .phone i {
+          margin-right: 4px; }
+  .contact-page-body .cpb--right {
+    float: left;
+    width: calc(100% - 350px);
+    padding-left: 20px; }
+    @media only screen and (max-width: 767px) {
+      .contact-page-body .cpb--right {
+        width: 100%; } }
+    .contact-page-body .cpb--right .wpcf7 label {
+      float: left;
+      width: 100%;
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      text-transform: uppercase; }
+    .contact-page-body .cpb--right .wpcf7 .wpcf7-form-control-wrap {
+      float: left;
+      width: 100%;
+      margin-top: 5px; }
+      .contact-page-body .cpb--right .wpcf7 .wpcf7-form-control-wrap input {
+        float: left;
+        width: 100%;
+        max-width: 600px; }
+      .contact-page-body .cpb--right .wpcf7 .wpcf7-form-control-wrap textarea {
+        float: left;
+        width: 100%;
+        max-width: 750px; }
+    .contact-page-body .cpb--right .wpcf7 .wpcf7-submit {
+      float: left;
+      width: auto;
+      margin-top: 30px;
+      padding: 1rem 1.875rem;
+      font-family: "Roboto", sans-serif;
+      font-size: 0.875rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      background-color: #529ed5;
+      color: white;
+      border: 0px; }
+      .contact-page-body .cpb--right .wpcf7 .wpcf7-submit:hover {
+        background-color: #90c1e4;
+        cursor: pointer; }
+  .contact-page-body h1 {
+    text-align: left;
+    font-style: italic; }
+  .contact-page-body p.body-text {
+    float: left;
+    width: 100%;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    margin-bottom: 0.9375rem;
+    text-align: left; }
+
+.wpcf7-validation-errors {
+  float: left;
+  width: 100%;
+  padding: 4px 15px;
+  background-color: red;
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff; }
+
+div.wpcf7-response-output {
+  position: relative;
+  top: 10px;
+  float: left;
+  width: 100%;
+  margin: 0;
+  padding: 4px 15px;
+  background-color: red;
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+  border: 0; }
+
+span.wpcf7-not-valid-tip {
+  position: relative;
+  top: -15px;
+  float: left;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 4px 5px;
+  background-color: red;
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff; }
+
 /* #########%% MODULES %%######### */
 /* %%%%%%%%%%%%%%%%%%%% BUTTON STYLES %%%%%%%%%%%%%%%%%%%% */
 .btn {
@@ -1199,7 +1620,7 @@ p.body-text {
   font-size: 0.875rem;
   font-weight: 500;
   text-transform: uppercase; }
-  @media only screen and (max-width: 640px) {
+  @media only screen and (max-width: 767px) {
     .btn {
       width: 100%; } }
   .btn:hover {
@@ -1226,56 +1647,479 @@ p.body-text {
       cursor: pointer; }
 
 .btn-read-more {
+  margin-top: 1.563rem;
+  margin-bottom: 1.25rem;
   padding: 0.3125rem 0.9375rem;
   font-size: 13px; }
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
+    .btn-read-more {
+      width: auto;
+      padding: 0.9375rem 1.25rem;
+      font-size: 12px; } }
+  @media only screen and (max-width: 767px) {
+    .btn-read-more {
+      width: auto;
+      padding: 0.9375rem 1.25rem;
+      font-size: 12px; } }
 
 /* %%%%%%%%%%%%%%%%%%%% FOOTER STYLES %%%%%%%%%%%%%%%%%%%% */
+.footer-callout {
+  position: relative;
+  float: left;
+  width: 100%;
+  padding: 35px 150px 20px 150px;
+  background-color: #d3d9dd; }
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
+    .footer-callout {
+      padding: 35px 40px 20px 40px; } }
+  @media only screen and (max-width: 767px) {
+    .footer-callout {
+      padding: 35px 20px 20px 20px; } }
+  .footer-callout .fc--left {
+    float: left;
+    width: calc(100% - 400px); }
+    @media only screen and (min-width: 768px) and (max-width: 992px) {
+      .footer-callout .fc--left {
+        width: 100%; } }
+    @media only screen and (max-width: 767px) {
+      .footer-callout .fc--left {
+        width: 100%; } }
+    .footer-callout .fc--left h3 {
+      max-width: 135px;
+      margin-bottom: 30px;
+      padding-top: 5px; }
+  .footer-callout .fc--right {
+    position: absolute;
+    top: -246px;
+    right: 0px;
+    float: left;
+    width: 400px;
+    height: 400px;
+    background-position: -300px;
+    background-image: url("../img/v-graphic.png");
+    background-repeat: no-repeat; }
+    @media only screen and (min-width: 768px) and (max-width: 992px) {
+      .footer-callout .fc--right {
+        display: none; } }
+    @media only screen and (max-width: 767px) {
+      .footer-callout .fc--right {
+        display: none; } }
+    .footer-callout .fc--right.transparent {
+      background-image: url("../img/v-graphic-2.png"); }
+
 footer {
   float: left;
   width: 100%;
   padding: 0.9375rem 0;
-  background-color: #529ed5; }
+  background-color: #222222; }
+  footer .footer-left {
+    float: left;
+    width: 25%;
+    padding-left: 1.563rem;
+    text-align: left; }
+    footer .footer-left span {
+      font-size: 13px;
+      color: #BBBBBB; }
+    footer .footer-left a {
+      font-size: 13px;
+      color: #ffffff; }
+      footer .footer-left a:hover {
+        color: #529ed5; }
+  footer .footer-middle {
+    float: left;
+    width: 50%;
+    color: #BBBBBB;
+    font-size: 13px;
+    text-align: center; }
+  footer .footer-right {
+    float: left;
+    width: 25%;
+    padding-right: 1.563rem;
+    font-size: 13px;
+    text-align: right; }
+    footer .footer-right a {
+      color: #529ed5; }
+      footer .footer-right a:hover {
+        text-decoration: underline; }
 
 /* %%%%%%%%%%%%%%%%%%%% HEADER STYLES %%%%%%%%%%%%%%%%%%%% */
+h1 {
+  margin-bottom: 0.625rem;
+  font-family: "Tinos", serif;
+  font-size: 27px;
+  color: #133850;
+  text-align: center; }
+  h1 span {
+    color: #529ed5; }
+  @media only screen and (max-width: 767px) {
+    h1 {
+      font-size: 22px; } }
+
+h2 {
+  float: left;
+  width: auto;
+  margin-bottom: 5px;
+  padding-top: 5px;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 600; }
+
+h3 {
+  margin-bottom: 0.625rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #133850;
+  border-top: 4px solid #133850;
+  text-align: left;
+  text-transform: uppercase; }
+
 /* %%%%%%%%%%%%%%%%%%%% IMAGE STYLES %%%%%%%%%%%%%%%%%%%% */
 .body-content img {
   float: left;
   width: 100%;
   border: 4px solid #529ed5; }
-  @media only screen and (max-width: 640px) {
+  @media only screen and (max-width: 767px) {
     .body-content img {
       width: 100%; } }
 
 /* %%%%%%%%%%%%%%%%%%%% NAV STYLES %%%%%%%%%%%%%%%%%%%% */
+#site-nav-toggle {
+  position: fixed;
+  top: 5px;
+  right: 20px;
+  padding: 10px;
+  background-color: #529ed5;
+  z-index: 100;
+  display: none; }
+  #site-nav-toggle:hover {
+    background-color: #7bb5df;
+    cursor: pointer; }
+  @media only screen and (max-width: 767px) {
+    #site-nav-toggle {
+      display: block; } }
+  #site-nav-toggle i {
+    color: #ffffff; }
+
 .site-nav {
-  position: absolute;
+  position: fixed;
   top: 25px;
-  right: 25px; }
-  .site-nav ul {
-    background: red; }
-    .site-nav ul li {
+  right: 25px;
+  -webkit-transition: all 200ms ease;
+          transition: all 200ms ease; }
+  @media only screen and (max-width: 767px) {
+    .site-nav {
+      top: -500px;
+      right: 0;
+      left: 0;
+      background-color: rgba(255, 255, 255, 0.95);
+      border-bottom: 4px solid #529ed5;
+      z-index: 1000000; }
+      .site-nav.active {
+        top: 0; } }
+  .site-nav header {
+    float: left;
+    width: 100%;
+    min-height: 50px;
+    padding-bottom: 20px;
+    background-color: #133850;
+    display: none; }
+    @media only screen and (min-width: 768px) and (max-width: 992px) {
+      .site-nav header {
+        display: block; } }
+    @media only screen and (max-width: 767px) {
+      .site-nav header {
+        display: block; } }
+    .site-nav header .logo-mobile {
+      position: absolute;
+      top: 5px;
+      left: 15px;
+      max-width: 130px; }
+  .site-nav ul li {
+    float: left;
+    margin-right: 1.25rem;
+    padding-bottom: 5px; }
+    @media only screen and (max-width: 767px) {
+      .site-nav ul li {
+        width: 100%;
+        margin-right: 0;
+        padding-bottom: 0; } }
+    .site-nav ul li.login-btn {
+      padding-left: 15px;
+      border-left: 1px solid #888; }
+      @media only screen and (max-width: 767px) {
+        .site-nav ul li.login-btn {
+          padding-left: 0;
+          border-left: 0; } }
+    .site-nav ul li.active {
+      border-bottom: 4px solid #529ed5; }
+      @media only screen and (max-width: 767px) {
+        .site-nav ul li.active {
+          background-color: #529ed5;
+          color: white;
+          border-bottom: 0px !important; } }
+      .site-nav ul li.active a {
+        color: #ffffff; }
+        .site-nav ul li.active a:hover {
+          background-color: #529ed5;
+          color: white;
+          cursor: default; }
+    .site-nav ul li a {
+      font-family: "Roboto", sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      text-transform: uppercase;
+      color: #22638e; }
+      @media only screen and (max-width: 767px) {
+        .site-nav ul li a {
+          float: left;
+          width: 100%;
+          padding-top: 10px;
+          padding-bottom: 10px; } }
+      .site-nav ul li a:hover {
+        background-color: #133850;
+        color: white; }
+  .site-nav.site-nav-about ul li.active {
+    border-bottom: 4px solid #ff8423; }
+  .site-nav.site-nav-blog ul li.active {
+    border-bottom: 4px solid #9e70af; }
+  .site-nav.site-nav-solutions ul li.active {
+    border-bottom: 4px solid #3da856; }
+  .site-nav.site-nav-contact ul li.active {
+    border-bottom: 4px solid #fad97b; }
+
+/* %%%%%%%%%%%%%%%%%%%% BLOG POSTS STYLES %%%%%%%%%%%%%%%%%%%% */
+ul.post-list {
+  float: left;
+  width: 100%;
+  margin-left: 0; }
+  ul.post-list li {
+    float: left;
+    width: 100%;
+    margin-bottom: 20px; }
+    ul.post-list li a.post-title {
       float: left;
-      margin-right: 1.25rem;
-      padding-bottom: 5px; }
-      .site-nav ul li.active {
-        border-bottom: 4px solid #529ed5; }
-        .site-nav ul li.active a {
-          color: white; }
-      .site-nav ul li a {
-        font-family: "Roboto", sans-serif;
-        font-size: 14px;
-        font-weight: 500;
-        text-transform: uppercase;
-        color: #656668; }
-        .site-nav ul li a:hover {
-          color: white; }
+      width: 100%;
+      margin-bottom: 0.625rem;
+      font-family: "Tinos", serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: #133850;
+      text-align: left; }
+    ul.post-list li .post-content {
+      float: left;
+      width: 100%; }
+      ul.post-list li .post-content p {
+        float: left;
+        width: 100%;
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        font-size: 13px;
+        line-height: 140%;
+        text-align: left; }
+
+.blog-page-body .bpb--left .meta em {
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 140%; }
+.blog-page-body .bpb--left .meta time {
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 140%; }
+.blog-page-body .bpb--left div.post .entry p {
+  float: left;
+  width: 100%;
+  margin-top: 1.25rem;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 140%; }
+.blog-page-body .bpb--left.archive-page {
+  padding-right: 55px; }
+  .blog-page-body .bpb--left.archive-page h2.archive-title {
+    float: left;
+    width: 100%;
+    margin-bottom: 0;
+    font-weight: 500; }
+    .blog-page-body .bpb--left.archive-page h2.archive-title strong {
+      color: #529ed5; }
+  .blog-page-body .bpb--left.archive-page .post h2 {
+    float: left;
+    width: 100%; }
+    .blog-page-body .bpb--left.archive-page .post h2 a {
+      float: left;
+      width: 100%;
+      margin-top: 1.25rem;
+      margin-bottom: 0;
+      font-family: "Tinos", serif;
+      font-size: 27px;
+      color: #133850;
+      font-weight: 500; }
+  .blog-page-body .bpb--left.archive-page .meta {
+    float: left;
+    width: 100%;
+    margin-top: .4rem; }
+  .blog-page-body .bpb--left.archive-page .entry p {
+    float: left;
+    width: 100%;
+    margin-top: .8rem !important;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 140%; }
+.blog-page-body .bpb--left.post-page {
+  padding-right: 55px; }
+  @media only screen and (max-width: 767px) {
+    .blog-page-body .bpb--left.post-page {
+      padding-right: 25px; } }
+  .blog-page-body .bpb--left.post-page h1 {
+    font-weight: 500; }
+  .blog-page-body .bpb--left.post-page a.post-title {
+    float: left;
+    width: 100%;
+    margin-top: 1.25rem;
+    margin-bottom: 0.625rem;
+    font-family: "Tinos", serif;
+    font-size: 27px;
+    color: #133850;
+    text-align: left; }
+  .blog-page-body .bpb--left.post-page .post-content {
+    float: left;
+    width: 100%;
+    margin-top: 0.625rem; }
+    @media only screen and (max-width: 767px) {
+      .blog-page-body .bpb--left.post-page .post-content {
+        margin-top: 0; } }
+    .blog-page-body .bpb--left.post-page .post-content p {
+      float: left;
+      width: 100%;
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+      font-size: 13px;
+      line-height: 140%; }
+
+article.blog-post-mini {
+  float: left;
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px 50px 0 0; }
+  article.blog-post-mini h3 {
+    margin-bottom: 0.625rem;
+    font-family: "Tinos", serif;
+    font-size: 22px;
+    color: #133850;
+    text-align: left;
+    border-top: 0px;
+    text-transform: none; }
+  article.blog-post-mini p {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 140%;
+    color: #000000;
+    text-align: left; }
+  article.blog-post-mini .btn {
+    margin-top: 20px; }
+
+article.blog-post-full {
+  float: left;
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px 50px 0 0; }
+  article.blog-post-full h3 {
+    margin-bottom: 0.625rem;
+    font-family: "Tinos", serif;
+    font-size: 22px;
+    line-height: 140%;
+    color: #133850;
+    text-align: left;
+    border-top: 0px;
+    text-transform: none; }
+  article.blog-post-full p {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 140%;
+    color: #133850;
+    text-align: left; }
+  article.blog-post-full .btn {
+    margin-top: 20px; }
 
 /* %%%%%%%%%%%%%%%%%%%% SIDEBAR NAV STYLES %%%%%%%%%%%%%%%%%%%% */
+.sd-social {
+  float: left;
+  width: 100%;
+  margin-top: 20px;
+  padding-top: 20px; }
+
+.sidebar-nav {
+  position: absolute;
+  left: 0;
+  right: 0; }
+  @media only screen and (max-width: 767px) {
+    .sidebar-nav {
+      position: static;
+      float: left;
+      width: 80%;
+      margin-left: 10%;
+      margin-right: 10%;
+      margin-bottom: 30px; } }
+  .sidebar-nav li {
+    position: relative;
+    float: left;
+    width: 100%;
+    min-height: 55px;
+    margin-top: 0.3125rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    background-color: #cbd9df;
+    text-align: center; }
+    @media only screen and (max-width: 767px) {
+      .sidebar-nav li {
+        float: left;
+        width: 96%;
+        margin-left: 2%;
+        margin-right: 2%; } }
+    .sidebar-nav li:hover {
+      background-color: #133850;
+      cursor: pointer; }
+      .sidebar-nav li:hover a {
+        color: #ffffff; }
+    .sidebar-nav li a {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      padding-top: 20px;
+      text-decoration: uppercase;
+      font-family: "Roboto", sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      color: #8ba4b0;
+      text-transform: uppercase; }
+      @media only screen and (max-width: 767px) {
+        .sidebar-nav li a {
+          float: left;
+          width: 96%;
+          margin-left: 2%;
+          margin-right: 2%;
+          font-size: 13px; } }
+    .sidebar-nav li.active {
+      background-color: #ff8423; }
+      .sidebar-nav li.active:hover {
+        cursor: default; }
+      .sidebar-nav li.active a {
+        color: #ffffff; }
+
 /* %%%%%%%%%%%%%%%%%%%% SOCIAL MEDIA NAV STYLES %%%%%%%%%%%%%%%%%%%% */
 .sm-nav {
   position: absolute;
   left: 25px;
   bottom: 25px; }
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
+    .sm-nav {
+      bottom: 15px;
+      right: 15px; } }
+  @media only screen and (max-width: 767px) {
+    .sm-nav {
+      display: none; } }
   .sm-nav li {
     float: left;
     margin-right: 15px; }
@@ -1287,6 +2131,11 @@ footer {
       background-color: #222222;
       border-radius: 50%;
       text-align: center; }
+      @media only screen and (max-width: 767px) {
+        .sm-nav li a {
+          width: 50%;
+          height: auto;
+          border-radius: 0; } }
       .sm-nav li a:hover {
         background-color: #555555;
         cursor: pointer; }
@@ -1307,41 +2156,138 @@ footer {
   position: relative;
   float: left;
   width: 100%;
-  min-height: 450px;
-  padding-top: 100px;
+  min-height: 375px;
+  padding-top: 90px;
   text-align: center;
-  background-size: cover;
-  background-position: 0 -100px; }
+  background-size: cover; }
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
+    .superhero {
+      min-height: 325px;
+      padding-top: 80px; } }
+  @media only screen and (max-width: 767px) {
+    .superhero {
+      min-height: 275px;
+      padding-top: 70px; } }
   .superhero .logo {
     position: absolute;
-    top: 25px;
-    left: 25px;
-    max-width: 200px; }
+    top: 8px;
+    left: 15px;
+    max-width: 175px; }
   .superhero h1 {
-    font-family: "Lora", serif;
-    font-size: 3.5rem;
+    font-family: "Tinos", serif;
+    font-size: 3rem;
     font-style: italic;
     font-weight: 600;
-    color: white; }
+    color: white;
+    text-shadow: 2px 2px 3px #000;
+    text-align: left; }
+    @media only screen and (min-width: 768px) and (max-width: 992px) {
+      .superhero h1 {
+        margin-top: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 2.5rem; } }
+    @media only screen and (max-width: 767px) {
+      .superhero h1 {
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 2.2rem; } }
   .superhero h2 {
     float: none;
     position: relative;
-    top: -20px;
-    max-width: 600px;
+    top: 0px;
+    max-width: 500px;
     margin-left: auto;
     margin-right: auto;
-    font-family: "Roboto", sans-serif;
-    font-size: 20px;
+    font-size: 15px;
     color: white;
-    line-height: 135%; }
+    line-height: 135%;
+    text-align: left; }
+    @media only screen and (max-width: 767px) {
+      .superhero h2 {
+        padding-left: 20px;
+        padding-right: 20px; } }
   .superhero a.btn {
     position: absolute;
     bottom: 25px;
-    right: 25px; }
+    right: 25px;
+    padding: 15px 25px;
+    font-size: 12px; }
+    @media only screen and (min-width: 768px) and (max-width: 992px) {
+      .superhero a.btn {
+        bottom: 15px;
+        right: 15px; } }
+    @media only screen and (max-width: 767px) {
+      .superhero a.btn {
+        display: none; } }
+  .superhero .superhero--left {
+    float: left;
+    width: calc(100% - 400px); }
+    @media only screen and (min-width: 768px) and (max-width: 992px) {
+      .superhero .superhero--left {
+        width: calc(100% - 300px); } }
+    @media only screen and (max-width: 767px) {
+      .superhero .superhero--left {
+        float: left;
+        width: 100%; } }
+    .superhero .superhero--left h1 {
+      float: left;
+      width: 100%;
+      padding-left: 150px;
+      text-align: left; }
+      @media only screen and (min-width: 768px) and (max-width: 992px) {
+        .superhero .superhero--left h1 {
+          margin-top: 10px;
+          padding-left: 25px; } }
+      @media only screen and (max-width: 767px) {
+        .superhero .superhero--left h1 {
+          margin-top: 10px;
+          margin-bottom: 10px;
+          padding-left: 30px;
+          text-align: center; } }
+    .superhero .superhero--left h2 {
+      float: left;
+      width: 100%;
+      max-width: 900px;
+      padding-left: 150px;
+      padding-right: 50px;
+      text-align: left; }
+      @media only screen and (min-width: 768px) and (max-width: 992px) {
+        .superhero .superhero--left h2 {
+          padding-left: 25px; } }
+      @media only screen and (max-width: 767px) {
+        .superhero .superhero--left h2 {
+          margin-bottom: 30px;
+          padding: 0px 30px 0px 30px;
+          font-size: 13px;
+          text-align: center; } }
+  .superhero .superhero--right {
+    position: relative;
+    top: 100px;
+    right: 0px;
+    float: left;
+    width: 350px; }
+    @media only screen and (min-width: 768px) and (max-width: 992px) {
+      .superhero .superhero--right {
+        top: 50px;
+        right: 30px;
+        width: 300px; } }
+    @media only screen and (max-width: 767px) {
+      .superhero .superhero--right {
+        top: auto;
+        right: auto;
+        float: left;
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px; } }
+    .superhero .superhero--right img {
+      border: 4px solid #ffffff; }
   .superhero.superhero-home {
     border-top: 4px solid #529ed5;
     background-color: #133850;
     background-image: url("../img/superheroes/superhero-bg-home.jpg"); }
+    .superhero.superhero-home h1, .superhero.superhero-home h2 {
+      text-align: center; }
   .superhero.superhero-about {
     border-top: 4px solid #ff8423;
     background-color: #133850;
@@ -1350,11 +2296,17 @@ footer {
     border-top: 4px solid #9e70af;
     background-color: #133850;
     background-image: url("../img/superheroes/superhero-bg-blog.jpg"); }
+    .superhero.superhero-blog h1, .superhero.superhero-blog h2 {
+      text-align: center; }
   .superhero.superhero-solutions {
     border-top: 4px solid #3da856;
     background-color: #133850;
     background-image: url("../img/superheroes/superhero-bg-solutions.jpg"); }
+    .superhero.superhero-solutions .superhero--right .sidebar-nav li.active {
+      background-color: #3da856; }
   .superhero.superhero-contact {
     border-top: 4px solid #fad97b;
     background-color: #133850;
     background-image: url("../img/superheroes/superhero-bg-contact.jpg"); }
+    .superhero.superhero-contact h1, .superhero.superhero-contact h2 {
+      text-align: center; }

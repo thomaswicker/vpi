@@ -1,2 +1,223 @@
 
 /* %%%%%%%%%%%%%%%%%%%% CONTACT PAGE SPECIFIC STYLES %%%%%%%%%%%%%%%%%%%% */
+
+.contact-page-body {
+  float: left;
+  width: 100%;
+  padding: 65px 150px 100px 150px;
+  background-color: $white;
+  text-align: left;
+
+  @include mq(md) {
+    padding: 65px 40px 100px 40px;
+  }
+
+  @include mq(sm) {
+    padding: 35px 20px 50px 20px;
+  }
+
+  .cpb--left {
+    float: left;
+    width: 350px;
+
+    @include mq(md) {
+
+    }
+
+    @include mq(sm) {
+      width: 100%;
+      padding-bottom: 40px;
+    }
+
+    h2 {
+      float: left;
+      width: 100%;
+    }
+
+    .cpb-photo {
+      float: left;
+      width: 140px;
+
+      img {
+        max-width: 120px;
+      }
+    }
+
+    .cpb-details {
+      float: left;
+      width: calc(100% - 150px);
+      padding-top: 20px;
+
+      h4, .title, .company-name, .email, .phone {
+        float: left;
+        width: 100%;
+        margin-bottom: 4px;
+        text-align: left;
+      }
+
+      h4 {
+        font-family: $font-3;
+        font-size: 21px;
+        font-style: normal;
+        font-weight: 600;
+        color: $black;
+      }
+
+      .title {
+        font-family: $font-1;
+        font-size: 16px;
+        font-style: italic;
+        font-weight: 500;
+        color: #999;
+      }
+
+      .company-name {
+        font-family: $font-1;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 500;
+        color: $black;
+      }
+
+      .email {
+        margin-top: 5px;
+        font-family: $font-1;
+        font-size: 13px;
+        font-style: normal;
+        text-transform: uppercase;
+        font-weight: 500;
+
+        i {
+          margin-right: 4px;
+        }
+      }
+
+      .phone {
+        margin-top: 5px;
+        font-family: $font-1;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 500;
+
+        i {
+          margin-right: 4px;
+        }
+      }
+    }
+  }
+
+  .cpb--right {
+    float: left;
+    width: calc(100% - 350px);
+    padding-left: 20px;
+
+    @include mq(md) {
+
+    }
+
+    @include mq(sm) {
+      width: 100%;
+    }
+
+    .wpcf7 {
+      label {
+        float: left;
+        width: 100%;
+        font-family: $font-2;
+        font-weight: 600;
+        font-size: 13px;
+        text-transform: uppercase;
+      }
+
+      .wpcf7-form-control-wrap {
+        float: left;
+        width: 100%;
+        margin-top: 5px;
+
+        input {
+          float: left;
+          width: 100%;
+          max-width: 600px;
+        }
+
+        textarea {
+          float: left;
+          width: 100%;
+          max-width: 750px;
+        }
+      }
+
+      .wpcf7-submit {
+        float: left;
+        width: auto;
+        margin-top: 30px;
+        padding: $unit $unit-xl;
+        font-family: $font-1;
+        font-size: $font-size-sm;
+        font-weight: $font-weight-semibold;
+        text-transform: uppercase;
+        background-color: $color-primary;
+        color: white;
+        border: 0px;
+
+        &:hover {
+          background-color: lighten($color-primary, 15%);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  h1 {
+    text-align: left;
+    font-style: italic;
+  }
+
+  p.body-text {
+    float: left;
+    width: 100%;
+    font-family: $font-2;
+    margin-bottom: $unit-sm;
+    text-align: left;
+  }
+}
+
+.wpcf7-validation-errors {
+  float: left;
+  width: 100%;
+  padding: 4px 15px;
+  background-color: red;
+  font-family: $font-1;
+  font-size: 13px;
+  font-weight: $font-weight-bold;
+  color: $white;
+}
+
+div.wpcf7-response-output {
+  position: relative;
+  top: 10px;
+  float: left;
+  width: 100%;
+  margin: 0;
+  padding: 4px 15px;
+  background-color: red;
+  font-family: $font-1;
+  font-size: 13px;
+  font-weight: $font-weight-bold;
+  color: $white;
+  border: 0;
+}
+
+span.wpcf7-not-valid-tip {
+  position: relative;
+  top: -15px;
+  float: left;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 4px 5px;
+  background-color: red;
+  font-family: $font-1;
+  font-size: 13px;
+  font-weight: $font-weight-bold;
+  color: $white;
+}

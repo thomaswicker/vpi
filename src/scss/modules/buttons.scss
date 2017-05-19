@@ -52,6 +52,28 @@
 }
 
 .btn-read-more {
+  margin-top: $unit-lg;
+  margin-bottom: $unit-md;
   padding: $unit-xxs $unit-sm;
   font-size: 13px;
+
+  @include mq(xl) {
+
+  }
+
+  @include mq(lg) {
+
+  }
+
+  @include mq(md) {
+    width: auto;
+    padding: $unit-sm $unit-md;
+    font-size: 12px;
+  }
+
+  @include mq(sm) {
+    width: auto;
+    padding: $unit-sm $unit-md;
+    font-size: 12px;
+  }
 }

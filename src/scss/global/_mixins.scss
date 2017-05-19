@@ -296,6 +296,10 @@
         @media only screen and (min-width: $xl-start) and (max-width: $xl-end) { @content; }
     }
 
+    @if $query == xxl {
+        @media only screen and (min-width: $xxl-start) and (max-width: $xxl-end) { @content; }
+    }
+
     @if $query == jumbo {
         @media only screen and (min-width: $jumbo-start) { @content; }
     }

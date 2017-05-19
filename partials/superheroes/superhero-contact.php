@@ -3,10 +3,9 @@
 
 	<?php get_template_part('partials/site-nav/site-nav-contact'); ?>
 
-	<h1>Contact</h1>
-	<h2>This will be subtext for the CONTACT PAGE</h2>
+	<h1>Contact Me</h1>
+	<h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
 
 	<?php get_template_part('partials/sm-nav'); ?>
 
-	<a href="/contact.php" class="btn btn-primary">Schedule an Appointment</a>
 </section>

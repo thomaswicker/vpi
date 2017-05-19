@@ -1,2 +1,126 @@
 
 /* %%%%%%%%%%%%%%%%%%%% ABOUT PAGE SPECIFIC STYLES %%%%%%%%%%%%%%%%%%%% */
+
+.about-page-body {
+  float: left;
+  width: 100%;
+  padding: 25px 500px 40px 150px;
+  background-color: $white;
+  text-align: left;
+
+  @include mq(xl) {
+  }
+
+  @include mq(lg) {
+  }
+
+  @include mq(md) {
+    padding: 25px 400px 40px 30px;
+  }
+
+  @include mq(sm) {
+    padding: 25px 20px 40px 20px;
+  }
+
+  h1 {
+    text-align: left;
+  }
+
+  p.body-text {
+    float: left;
+    width: 100%;
+    font-family: $font-2;
+    margin-bottom: $unit-sm;
+    text-align: left;
+  }
+
+  h4 {
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+    font-family: $font-3;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 140%;
+    color: $color-secondary;
+
+    @include mq(sm) {
+      font-size: 17px;
+    }
+  }
+
+  ul.about-list {
+    float: left;
+    width: 100%;
+    margin-bottom: $unit-md;
+    font-family: $font-2;
+    font-size: 16px;
+    list-style-type: disc;
+
+    li {
+      float: left;
+      width: 100%;
+      margin-top: $unit-sm;
+      margin-left: $unit-md;
+      padding-left: $unit-tiny;
+    }
+  }
+}
+
+.about-page-callout {
+  float: left;
+  width: 100%;
+  padding: 25px 150px 20px 150px;
+  background-color: $color-secondary;
+
+  @include mq(xl) {
+
+  }
+
+  @include mq(lg) {
+
+  }
+
+  @include mq(md) {
+    padding: 25px 40px 20px 40px;
+  }
+
+  @include mq(sm) {
+    padding: 25px 20px 20px 20px;
+  }
+
+  h3, h5, p.apc--text {
+    float: left;
+    width: 100%;
+    text-align: left;
+  }
+
+  h3 {
+    max-width: 93px;
+    padding-top: 5px;
+    font-family: $font-1;
+    font-size: 14px;
+    color: $color-about;
+    text-transform: uppercase;
+    border-top: 3px solid $color-about;
+  }
+
+  h5 {
+    margin-top: 5px;
+    font-family: $font-1;
+    font-size: 16px;
+    font-weight: 600;
+    color: $white;
+  }
+
+  p.apc--text {
+    margin-top: 5px;
+    margin-bottom: 20px;
+    font-family: $font-2;
+    font-size: 13px;
+    color: $white;
+  }
+}

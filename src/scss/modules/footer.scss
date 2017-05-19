@@ -1,11 +1,138 @@
 
 /* %%%%%%%%%%%%%%%%%%%% FOOTER STYLES %%%%%%%%%%%%%%%%%%%% */
 
+.footer-callout {
+  position: relative;
+  float: left;
+  width: 100%;
+  padding: 35px 150px 20px 150px;
+  background-color: #d3d9dd;
 
+  @include mq(xl) {
+
+  }
+
+  @include mq(lg) {
+
+  }
+
+  @include mq(md) {
+    padding: 35px 40px 20px 40px;
+
+  }
+
+  @include mq(sm) {
+    padding: 35px 20px 20px 20px;
+  }
+
+  .fc--left {
+    float: left;
+    width: calc(100% - 400px);
+
+    @include mq(xl) {
+
+    }
+
+    @include mq(lg) {
+
+    }
+
+    @include mq(md) {
+      width: 100%;
+    }
+
+    @include mq(sm) {
+      width: 100%;
+    }
+
+    h3 {
+      max-width: 135px;
+      margin-bottom: 30px;
+      padding-top: 5px;
+    }
+  }
+
+  .fc--right {
+    position: absolute;
+    top: -246px;
+    right: 0px;
+    float: left;
+    width: 400px;
+    height: 400px;
+    background-position: -300px;
+    background-image: url('../img/v-graphic.png');
+    background-repeat: no-repeat;
+
+    @include mq(xl) {
+
+    }
+
+    @include mq(lg) {
+
+    }
+
+    @include mq(md) {
+      display: none;
+    }
+
+    @include mq(sm) {
+      display: none;
+    }
+
+    &.transparent {
+      background-image: url('../img/v-graphic-2.png');
+    }
+  }
+}
 
 footer {
   float: left;
   width: 100%;
   padding: $unit-sm 0;
-  background-color: $color-primary;
+  background-color: #222222;
+
+  .footer-left {
+    float: left;
+    width: 25%;
+    padding-left: $unit-lg;
+    text-align: left;
+
+    span {
+      font-size: 13px;
+      color: #BBBBBB;
+    }
+
+    a {
+      font-size: 13px;
+      color: $white;
+
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+
+  .footer-middle {
+    float: left;
+    width: 50%;
+    color: #BBBBBB;
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .footer-right {
+    float: left;
+    width: 25%;
+    padding-right: $unit-lg;
+    font-size: 13px;
+    text-align: right;
+
+    a {
+      color: $color-primary;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }
