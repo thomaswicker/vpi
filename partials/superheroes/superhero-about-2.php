@@ -5,7 +5,8 @@
 
 	<section class="superhero--left">
 		<h1>About: <span>Family</span></h1>
-		<h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
+		<h2>"A man should never neglect his family for business."
+			<strong>- Walt Disney</strong></h2>
 	</section>
 
 	<section class="superhero--right">

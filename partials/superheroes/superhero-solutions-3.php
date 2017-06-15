@@ -5,7 +5,7 @@
 
 	<section class="superhero--left">
 		<h1>Solutions: <span>Living</span></h1>
-		<h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
+		<h2>"Our greatest fear should not be of failure but of succeeding at things in life that don't really matter." <strong>- Francis Chan</strong></h2>
 	</section>
 
 	<section class="superhero--right">

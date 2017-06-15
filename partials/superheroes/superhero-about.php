@@ -5,7 +5,7 @@
 
 	<section class="superhero--left">
 		<h1>About: <span>Me</span></h1>
-		<h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
+		<h2>”Let’s go get some stories!”<strong>- Pastor Ed Taylor</strong></h2>
 	</section>
 
 	<section class="superhero--right">

@@ -1243,14 +1243,16 @@ p.body-text {
     @media only screen and (max-width: 767px) {
       .about-page-body h4 {
         font-size: 17px; } }
-  .about-page-body ul.about-list {
+  .about-page-body ul {
     float: left;
     width: 100%;
     margin-bottom: 1.25rem;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 16px;
     list-style-type: disc; }
-    .about-page-body ul.about-list li {
+    .about-page-body ul.fee-structure {
+      margin-top: -10px; }
+    .about-page-body ul li {
       float: left;
       width: 100%;
       margin-top: 0.9375rem;
@@ -1802,13 +1804,14 @@ h3 {
     color: #ffffff; }
 
 .site-nav {
-  position: fixed;
+  position: absolute;
   top: 25px;
   right: 25px;
   -webkit-transition: all 200ms ease;
           transition: all 200ms ease; }
   @media only screen and (max-width: 767px) {
     .site-nav {
+      position: fixed;
       top: -500px;
       right: 0;
       left: 0;
@@ -1826,7 +1829,7 @@ h3 {
     display: none; }
     @media only screen and (min-width: 768px) and (max-width: 992px) {
       .site-nav header {
-        display: block; } }
+        display: none; } }
     @media only screen and (max-width: 767px) {
       .site-nav header {
         display: block; } }
@@ -2199,14 +2202,32 @@ article.blog-post-full {
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
-    font-size: 15px;
+    font-size: 22px;
+    font-weight: 400;
     color: white;
     line-height: 135%;
     text-align: left; }
+    .superhero h2 strong {
+      float: left;
+      width: 100%;
+      margin-top: 5px;
+      font-size: 18px;
+      font-style: italic;
+      font-weight: 600; }
+    @media only screen and (min-width: 768px) and (max-width: 992px) {
+      .superhero h2 {
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 18px; }
+        .superhero h2 strong {
+          font-size: 15px; } }
     @media only screen and (max-width: 767px) {
       .superhero h2 {
         padding-left: 20px;
-        padding-right: 20px; } }
+        padding-right: 20px;
+        font-size: 15px; }
+        .superhero h2 strong {
+          font-size: 13px; } }
   .superhero a.btn {
     position: absolute;
     bottom: 25px;

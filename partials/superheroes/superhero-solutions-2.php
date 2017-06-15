@@ -5,7 +5,7 @@
 
 	<section class="superhero--left">
 		<h1>Solutions: <span>Investing</span></h1>
-		<h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
+		<h2>“We don’t have to be smarter than the rest. We have to be more disciplined than the rest.”<strong>- Warren Buffett</strong></h2>
 	</section>
 
 	<section class="superhero--right">

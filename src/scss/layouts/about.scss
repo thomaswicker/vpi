@@ -52,13 +52,21 @@
     }
   }
 
-  ul.about-list {
+  ul {
     float: left;
     width: 100%;
     margin-bottom: $unit-md;
     font-family: $font-2;
     font-size: 16px;
     list-style-type: disc;
+
+    &.fee-structure {
+      margin-top: -10px;
+    }
+
+    &.about-list {
+
+    }
 
     li {
       float: left;

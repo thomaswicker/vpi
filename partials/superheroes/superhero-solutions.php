@@ -5,7 +5,7 @@
 
 	<section class="superhero--left">
 		<h1>Solutions: <span>Planning</span></h1>
-		<h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
+		<h2>"Always plan ahead. It wasn’t raining when Noah built the ark."<strong>- Richard Cushing</strong></h2>
 	</section>
 
 	<section class="superhero--right">

@@ -5,7 +5,7 @@
 
 	<section class="superhero--left">
 		<h1>About: <span>Business</span></h1>
-		<h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
+		<h2>“A good list of questions to ask your advisor will include the following: Where will my money be held? Right answer: Somewhere else! Are you a broker? Right answer: No! Do you or any affiliate have proprietary investments of any kind? Right answer: No! How are you compensated? Right answer: Total disclosure in writing and never make commissions on any investment product.”<strong>-Peter Mallouk</strong></h2>
 	</section>
 
 	<section class="superhero--right">
