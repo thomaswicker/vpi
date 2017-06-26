@@ -18,8 +18,8 @@ Template Name: Contact
       <h4>Chris Landry</h4>
       <p class="title">President</p>
       <p class="company-name">Visionary Planning & Investment</p>
-      <a href="mailto:chris.landry@visionaryplanningandinvestment.com" class="email"><i class="fa fa-envelope"></i>Email Me</a>
-      <a href="" class="phone"><i class="fa fa-phone" class="phone"></i>720.777.7777</a>
+      <a href="mailto:chris@visionaryplanningandinvestment.com" class="email"><i class="fa fa-envelope"></i>Email Me</a>
+      <a href="tel:720-210-4990" class="phone"><i class="fa fa-phone" class="phone"></i>720.210.4990</a>
     </section>
   </div>
 

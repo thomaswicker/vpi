@@ -9,7 +9,7 @@
 
   <ul>
     <li>
-      <a href="/index">
+      <a href="/">
         Home
       </a>
     </li>
